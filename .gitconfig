@@ -1,0 +1,65 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[push]
+	default = current
+[alias]
+	a = add
+	aa = add -A
+	ap = add -p
+	b = branch
+	c = commit
+	cm = commit -m
+	ca = commit --amend
+	can = commit --amend --no-edit
+	co = checkout
+	cob = checkout -b
+	cl = clone —-recursive
+	clr = clone —-recursive
+	d = diff
+	ds = diff --staged
+	fo = fetch origin
+	fu = fetch upstream
+	l = log
+	lo = log --oneline
+	last = log -1 HEAD
+	m = merge
+	ma = merge --abort
+	p = push origin
+	pl = pull origin master
+	plu = pull upstream master
+	plr = pull --rebase origin master
+	plru = pull --rebase upstream master
+	plrum = pull --rebase upstream main
+	pm = push origin master
+	r = rebase
+	rmao = remote add origin
+	rmau = remote add upstream
+	rmro = remote remove origin
+	rmru = remote remove upstream
+	ri = rebase -i
+	rim = rebase -i master
+	riom = rebase -i origin/master
+	rium = rebase -i upstream/master
+	riumm = rebase -i upstream/main
+	rm = rebase master
+	rom = rebase origin/master
+	rum = rebase upstream/master
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = reset
+	st = status
+	s = stash
+	sp = stash pop
+	unstage = reset HEAD --
+[user]
+	name = Niels Gerritsen
+	email = n.c.gerritsen@gmail.com
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

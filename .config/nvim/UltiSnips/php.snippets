@@ -1,0 +1,3 @@
+snippet dump
+while (ob_get_level() > 0) ob_end_clean(); echo'<pre>'; var_dump($1); die;$0
+endsnippet
