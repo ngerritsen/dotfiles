@@ -88,19 +88,31 @@ let g:fzf_colors =
 
 colorscheme nord
 
+" Tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
 
+" Better Escape
 inoremap <silent> jj <Esc>
 cnoremap <silent> jj <Esc>
 vnoremap <silent> jj <Esc>
 
+" Splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nnoremap <silent> <Leader>l :vertical resize +5<CR>
+nnoremap <silent> <Leader>h :vertical resize -5<CR>
+nnoremap <silent> <Leader>k :resize +5<CR>
+nnoremap <silent> <Leader>j :resize -5<CR>
+
+set splitbelow
+set splitright
+set wmh=0
 
 let mapleader = "\<space>"
 let g:camelcasemotion_key = '<leader>'
@@ -112,11 +124,7 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
   exec 'cnoremap' key '<Nop>'
 endfor
 
-" Splits
-set splitbelow
-set splitright
-set wmh=0
-
+" Ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
