@@ -26,9 +26,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'mhinz/vim-startify'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'morhetz/gruvbox'
 
 " Programming
 Plug 'dense-analysis/ale'
@@ -42,6 +45,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'gko/vim-coloresque'
 Plug 'stsewd/fzf-checkout.vim'
+Plug 'kburdett/vim-nuuid'
 
 call plug#end()
 
@@ -68,7 +72,7 @@ set t_Co=256
 
 let g:nord_cursor_line_number_background = 1
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'spaceduck',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -93,7 +97,7 @@ let g:fzf_colors =
       \ 'spinner': ['fg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
 
-colorscheme nord
+colorscheme spaceduck
 
 " Tabs
 set tabstop=2
@@ -112,11 +116,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <silent> <Leader>l :vertical resize +5<CR>
-nnoremap <silent> <Leader>h :vertical resize -5<CR>
-nnoremap <silent> <Leader>k :resize +5<CR>
-nnoremap <silent> <Leader>j :resize -5<CR>
-
 set splitbelow
 set splitright
 set wmh=0
@@ -128,7 +127,6 @@ let g:camelcasemotion_key = '<leader>'
 for key in ['<Up>', '<Down>', '<Left>', '<Right>']
   exec 'noremap' key '<Nop>'
   exec 'inoremap' key '<Nop>'
-  exec 'cnoremap' key '<Nop>'
 endfor
 
 " Ale
@@ -176,6 +174,7 @@ let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let g:NERDTreeWinSize=45
 
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 nnoremap <silent> <C-f> :NERDTreeFind<CR>
