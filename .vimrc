@@ -2,6 +2,7 @@ let g:ale_disable_lsp = 1
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+
 " Editor
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-eunuch'
@@ -15,19 +16,18 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
+Plug 'adelarsq/vim-matchit'
 
 " UI
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
 " Themes
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'arcticicestudio/nord-vim'
 
 " Programming
@@ -66,11 +66,18 @@ set termguicolors
 
 set t_Co=256
 
-let g:airline_powerline_fonts = 1
 let g:nord_cursor_line_number_background = 1
-let g:gruvbox_contrast_dark='medium'
-let g:airline_theme='nord'
-let g:lightline = { 'colorscheme': 'nord' }
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
 let g:fzf_colors =
       \ { 'fg':      ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
