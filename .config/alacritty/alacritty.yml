@@ -9,7 +9,7 @@ font:
   normal:
     family: "Hack NF"
 
-  size: 12
+  size: 13
 
 import:
   - ~/.config/alacritty/themes/dracula.yml

@@ -21,8 +21,9 @@ if [ -f ~/.aliases ]; then
    . ~/.aliases
 fi
 
-# Flex
-pfetch
-
 # Prompt
-eval "$(starship init bash)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+else
+  export PS1='\[\e[36m\]\w \[\e[35m\]> \[\e[0m\]'
+fi

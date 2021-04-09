@@ -22,12 +22,22 @@ fi
 # Alias
 source $HOME/.aliases
 
-# Flex
-neofetch
-
 # Plugins
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [ ! -f "$HOME/.antigen.zsh" ]; then
+  curl -L git.io/antigen > "$HOME/.antigen.zsh"
+fi
+
+source "$HOME/.antigen.zsh"
+
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
 
 # Prompt
-eval "$(starship init zsh)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+else
+  PROMPT='%F{cyan}%1~%f %F{magenta}>%f '
+fi

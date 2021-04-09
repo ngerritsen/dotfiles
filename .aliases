@@ -1,9 +1,7 @@
-alias ls='exa'
 alias ll='exa -la'
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias ping='prettyping --nolegend'
-alias cat='bat'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
