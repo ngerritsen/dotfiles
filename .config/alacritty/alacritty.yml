@@ -12,4 +12,4 @@ font:
   size: 12
 
 import:
-  - ~/.config/alacritty/themes/spaceduck.yml
+  - ~/.config/alacritty/themes/gruvbox.yml

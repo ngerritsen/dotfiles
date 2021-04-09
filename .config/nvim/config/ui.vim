@@ -6,12 +6,13 @@ set signcolumn=yes
 set cursorline
 
 set termguicolors
+set background=dark
 
 set t_Co=256
 
 let g:nord_cursor_line_number_background = 1
 let g:lightline = {
-      \ 'colorscheme': 'spaceduck',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -36,4 +37,4 @@ let g:fzf_colors =
       \ 'spinner': ['cfg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
 
-colorscheme spaceduck
+colorscheme gruvbox
