@@ -1,3 +1,5 @@
+let mapleader = "\<space>"
+
 " Better Escape
 inoremap <silent> jj <Esc>
 cnoremap <silent> jj <Esc>
@@ -5,6 +7,7 @@ vnoremap <silent> jj <Esc>
 
 " Quick edit and source vimrc
 nnoremap <silent> <Leader>, :e $MYVIMRC<CR>
+nnoremap <silent> <Leader>,e :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>,s :source $MYVIMRC<CR>
 
 " Splits
@@ -12,8 +15,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-let mapleader = "\<space>"
 
 let g:camelcasemotion_key = '<leader>'
 

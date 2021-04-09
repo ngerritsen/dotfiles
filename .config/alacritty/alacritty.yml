@@ -5,11 +5,11 @@ window:
   decorations: none
   startup_mode: Maximized
 
-# FiraCode Nerd Font: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 font:
   normal:
-    family: "FiraCode Nerd Font"
+    family: "Hack NF"
+
   size: 12
 
 import:
-  - ~/.config/alacritty/themes/gruvbox.yml
+  - ~/.config/alacritty/themes/dracula.yml

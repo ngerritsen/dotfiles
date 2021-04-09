@@ -1,18 +1,16 @@
-set number
-set relativenumber
-set colorcolumn=80
-set laststatus=2
-set signcolumn=yes
-set cursorline
-
-set termguicolors
 set background=dark
 
+" Italics
+set t_ZH=^[[3m
+set t_ZR=^[[23m
+
+" 256 Colors
+set termguicolors
 set t_Co=256
 
 let g:nord_cursor_line_number_background = 1
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -37,4 +35,4 @@ let g:fzf_colors =
       \ 'spinner': ['cfg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
 
-colorscheme gruvbox
+colorscheme dracula

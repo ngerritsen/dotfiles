@@ -6,6 +6,15 @@ set undodir=~/.vim/undodir
 set undofile
 set hidden
 set nowrap
+set nohlsearch
+
+" Interface
+set number
+set relativenumber
+set colorcolumn=80
+set laststatus=2
+set signcolumn=yes
+set cursorline
 
 " Tabs
 set tabstop=2
