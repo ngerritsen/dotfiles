@@ -23,7 +23,7 @@ fi
 source $HOME/.aliases
 
 # Flex
-pfetch
+neofetch
 
 # Plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

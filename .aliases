@@ -4,5 +4,5 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias ping='prettyping --nolegend'
 alias cat='bat'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmx='tmux attach || tmux new -s main'
