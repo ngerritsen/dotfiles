@@ -35,6 +35,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
+# Zoxide
+if command -v starship >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
 # Prompt
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
