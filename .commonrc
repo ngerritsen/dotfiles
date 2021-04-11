@@ -1,0 +1,70 @@
+# Path
+if [ -d "$HOME/.bin" ]
+then
+  PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]
+then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/Applications" ]
+then
+  PATH="$HOME/Applications:$PATH"
+fi
+
+exists ()
+{
+  command -v "$1" >/dev/null 2>&1
+}
+
+# Better file listing
+if exists exa
+then
+  alias ls='exa -l --group-directories-first'
+  alias la='exa -a --group-directories-first'
+  alias ll='exa -la --group-directories-first'
+  alias lt='exa -aT --group-directories-first'
+  alias tree="exa --tree --group-directories-first"
+else
+  alias ll='ls -la'
+fi
+
+# Better file viewer
+if exists bat
+then
+  alias cat='bat'
+fi
+
+# Better disk space analyzer
+if exists ncdu
+then
+  alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+fi
+
+# Better ping
+if exists prettytyping
+then
+  alias ping='prettyping --nolegend'
+fi
+
+# Better vim
+if exists nvim
+then
+  alias vim="nvim"
+fi
+
+# Add default flags
+alias df='df -h'
+
+# Utilities
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmx='tmux attach || tmux new -s main'
+alias dsa='docker stop $(docker ps -q)'
+
+# Zoxide
+if exists zoxide
+then
+  eval "$(zoxide init zsh)"
+fi

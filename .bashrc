@@ -1,34 +1,20 @@
-# Exports
-export TERM="xterm-256color"
-export EDITOR=vim
-export VISUAL=vim
+# Default prompt
+export PS1='\[\e[36m\]\w \[\e[35m\]> \[\e[0m\]'
 
-# Path
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
+# Source config
+alias src="source $HOME/.bashrc"
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
+# Vim mode
+set -o vi
 
-if [ -d "$HOME/Applications" ] ;
-  then PATH="$HOME/Applications:$PATH"
-fi
+# Case insensitive autocompletion
+bind "set completion-ignore-case on"
 
-# Alias
-if [ -f ~/.aliases ]; then
-   . ~/.aliases
-fi
-
-# Zoxide
-if command -v starship >/dev/null 2>&1; then
-  eval "$(zoxide init zsh)"
-fi
+# Common
+source $HOME/.commonrc
 
 # Prompt
-if command -v starship >/dev/null 2>&1; then
-  eval "$(starship init zsh)"
-else
-  export PS1='\[\e[36m\]\w \[\e[35m\]> \[\e[0m\]'
+if exists starship
+then
+  eval "$(starship init bash)"
 fi
