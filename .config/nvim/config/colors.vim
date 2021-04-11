@@ -5,8 +5,8 @@ set t_ZH=^[[3m
 set t_ZR=^[[23m
 
 " 256 Colors
-set termguicolors
 set t_Co=256
+set termguicolors
 
 let g:nord_cursor_line_number_background = 1
 let g:lightline = {

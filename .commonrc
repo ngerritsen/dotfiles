@@ -1,3 +1,8 @@
+# Exports
+export TERM="xterm-256color"
+export EDITOR=vim
+export VISUAL=vim
+
 # Path
 if [ -d "$HOME/.bin" ]
 then
@@ -13,6 +18,15 @@ if [ -d "$HOME/Applications" ]
 then
   PATH="$HOME/Applications:$PATH"
 fi
+
+# Plain aliases
+alias cl="clear"
+alias g="git"
+
+# Utilities
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmx='tmux attach || tmux new -s main'
+alias dsa='docker stop $(docker ps -q)'
 
 exists ()
 {
@@ -52,16 +66,15 @@ fi
 # Better vim
 if exists nvim
 then
+  alias vi="nvim"
   alias vim="nvim"
+  export EDITOR=nvim
+  export VISUAL=nvim
+
 fi
 
 # Add default flags
 alias df='df -h'
-
-# Utilities
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias tmx='tmux attach || tmux new -s main'
-alias dsa='docker stop $(docker ps -q)'
 
 # Zoxide
 if exists zoxide
