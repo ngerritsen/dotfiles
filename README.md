@@ -7,7 +7,7 @@ Dotfiles of Niels Gerritsen.
 Quickly clone and checkout dotfile repository as bare git repository in home folder:
 
 ```
-curl -Lks https://bit.ly/3fY3Fgk | /bin/bash
+curl -Lks https://bit.ly/ngdot | /bin/bash
 ```
 
 After the script has run a command line alias `dot` should be available to work with the bar git repository ([more information](https://www.atlassian.com/git/tutorials/dotfiles)).
