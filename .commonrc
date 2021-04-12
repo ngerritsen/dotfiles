@@ -19,6 +19,12 @@ then
   PATH="$HOME/Applications:$PATH"
 fi
 
+# Rust
+if [ -d "$HOME/.cargo/env" ]
+then
+  source "$HOME/.cargo/env"
+fi
+
 # Plain aliases
 alias cl="clear"
 alias g="git"
