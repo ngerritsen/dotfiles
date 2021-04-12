@@ -28,20 +28,14 @@ chsh -s $(which zsh)
 
 ### Fonts
 
-To install the required Nerd Fonts run:
-
-```
-sh ~/.scripts/fonts.sh
-```
-
-Or install them manually from [Nerd Fonts](https://www.nerdfonts.com/).
+Install appropriate patched fonts from: [Nerd Fonts](https://www.nerdfonts.com/) ([Installation instructions](https://github.com/ryanoasis/nerd-fonts#font-installation))
 
 ### Tmux
 
 To make the tmux theme and plugins work install the tmux plugin manager ([tmp](https://github.com/tmux-plugins/tpm)) by running
 
 ```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sh ~/.scripts/tmp/sh
 ```
 
 ### Vim
