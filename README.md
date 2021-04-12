@@ -10,11 +10,11 @@ Quickly clone and checkout dotfile repository as bare git repository in home fol
 curl -Lks https://bit.ly/ngdot | /bin/bash
 ```
 
-After the script has run a command line alias `dot` should be available to work with the bar git repository ([more information](https://www.atlassian.com/git/tutorials/dotfiles)).
+After the script has run a command line alias `dot` should be available to work with the bare git repository ([more information](https://www.atlassian.com/git/tutorials/dotfiles)).
 
 ### Command line shell
 
-The command line prompt will by default work, but to a more advanced prompt I use Starship, install by running:
+The command line prompt will by default work, but for a more advanced prompt use [Starship](https://starship.rs/), install by running:
 
 ```
 curl -fsSL https://starship.rs/install.sh | bash
@@ -24,6 +24,24 @@ The `.bashrc` and `.zshrc` files automatically enable Starship. On Linux bash wi
 
 ```
 chsh -s $(which zsh)
+```
+
+### Fonts
+
+To install the required Nerd Fonts run:
+
+```
+sh ~/.scripts/fonts.sh
+```
+
+Or install them manually from [Nerd Fonts](https://www.nerdfonts.com/).
+
+### Tmux
+
+To make the tmux theme and plugins work install the tmux plugin manager ([tmp](https://github.com/tmux-plugins/tpm)) by running
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ### Vim
