@@ -41,7 +41,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'gko/vim-coloresque'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'kburdett/vim-nuuid'
 

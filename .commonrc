@@ -28,6 +28,8 @@ fi
 # Plain aliases
 alias cl="clear"
 alias g="git"
+alias nf="neofetch"
+alias pf="pfetch"
 
 # Utilities
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
