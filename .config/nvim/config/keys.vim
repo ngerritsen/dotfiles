@@ -27,7 +27,7 @@ endfor
 " Fz
 nnoremap <silent> <C-p> :GFiles<CR>
 nnoremap <silent> <Leader><C-p> :Files<CR>
-nnoremap <silent> <C-s> :Ag<CR>
+nnoremap <silent> <C-s> :Rg<CR>
 nnoremap <silent> <C-e> :History<CR>
 
 " Easymotion
