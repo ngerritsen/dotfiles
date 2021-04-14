@@ -5,6 +5,11 @@ inoremap <silent> jj <Esc>
 cnoremap <silent> jj <Esc>
 vnoremap <silent> jj <Esc>
 
+" Git Fugitive
+nmap <Leader>gs :G<CR>
+nmap <Leader>gf :diffget //2<CR>
+nmap <Leader>gj :diffget //3<CR>
+
 " Quick edit and source vimrc
 nnoremap <silent> <Leader>, :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>,e :e $MYVIMRC<CR>

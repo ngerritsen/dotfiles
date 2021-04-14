@@ -2,7 +2,9 @@
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+
+" Vim Rooter
+let g:rooter_patterns = ['>Projects']
 
 " Lightline
 let g:lightline = {

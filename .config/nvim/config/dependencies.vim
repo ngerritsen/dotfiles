@@ -14,7 +14,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
 Plug 'adelarsq/vim-matchit'
-Plug 'gko/vim-coloresque'
+Plug 'airblade/vim-rooter'
 
 " UI
 Plug 'ryanoasis/vim-devicons'

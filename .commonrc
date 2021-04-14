@@ -35,6 +35,7 @@ alias pf="pfetch"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
+alias fs='fortune | cowsay | lolcat'
 
 exists ()
 {
@@ -89,3 +90,5 @@ if exists zoxide
 then
   eval "$(zoxide init zsh)"
 fi
+
+neofetch
