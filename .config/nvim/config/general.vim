@@ -1,3 +1,5 @@
+" This file contains general vim settings.
+
 " General
 set noswapfile
 set nobackup

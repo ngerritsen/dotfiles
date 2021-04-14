@@ -17,14 +17,15 @@ Plug 'adelarsq/vim-matchit'
 Plug 'gko/vim-coloresque'
 
 " UI
+Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+" Plug 'itchyny/lightline.vim'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
