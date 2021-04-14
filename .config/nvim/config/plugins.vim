@@ -1,8 +1,5 @@
 " This file contains the configuration for plugins, the actual plugins are installed in dependencies.vim
 
-" Airline
-let g:airline_powerline_fonts = 1
-
 " Vim Rooter
 let g:rooter_patterns = ['>Projects']
 
@@ -15,8 +12,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-      \   'filetype': 'MyFiletype',
-      \   'fileformat': 'MyFileformat'
+      \   'filetype': 'WebDevIconsGetFileTypeSymbol'
       \ },
       \ }
 

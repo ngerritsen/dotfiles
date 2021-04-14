@@ -17,6 +17,7 @@ set colorcolumn=80
 set laststatus=2
 set signcolumn=yes
 set cursorline
+set noshowmode
 
 " Tabs
 set tabstop=2
