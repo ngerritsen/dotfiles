@@ -14,6 +14,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
 Plug 'adelarsq/vim-matchit'
+Plug 'gko/vim-coloresque'
 
 " UI
 Plug 'preservim/nerdtree'
@@ -23,6 +24,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'mhinz/vim-startify'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -30,6 +32,7 @@ Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'mhartington/oceanic-next'
 
 " Programming
 Plug 'dense-analysis/ale'

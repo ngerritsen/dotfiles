@@ -27,6 +27,17 @@ set splitbelow
 set splitright
 set wmh=0
 
+let g:startify_custom_header = [
+    \'    ___       __                                                            ',
+    \'  /'' _ `\   /''_ `\                                                        ',
+    \'  /\ \/\ \ /\ \L\ \                 Niels Gerritsen                         ',
+    \'  \ \_\ \_\\ \____ \                https://nielsgerritsen.com              ',
+    \'   \/_/\/_/ \/___L\ \  _______      https://github.com/ngerritsen/dotfiles  ',
+    \'              /\____/ /\______\                                             ',
+    \'              \_/__/  \/______/                                             ',
+    \'                                                                            ',
+    \]
+
 " NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer = 1
@@ -34,14 +45,20 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeWinSize=45
 
-" Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" Start NERDTree and Startify when Vim starts without any argument.
+autocmd VimEnter *
+    \   if !argc()
+    \ |   Startify
+    \ |   NERDTree
+    \ |   wincmd w
+    \ | endif
 
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0]
+    \ | Startify
+    \ | endif
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
