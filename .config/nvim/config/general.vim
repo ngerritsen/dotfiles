@@ -9,11 +9,13 @@ set undofile
 set hidden
 set nowrap
 set nohlsearch
+set timeoutlen=320
+set timeoutlen=10
 
 " Interface
 set number
 set relativenumber
-set colorcolumn=80
+set colorcolumn=100
 set laststatus=2
 set signcolumn=yes
 set cursorline

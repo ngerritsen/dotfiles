@@ -10,6 +10,12 @@ nmap <Leader>gs :G<CR>
 nmap <Leader>gf :diffget //2<CR>
 nmap <Leader>gj :diffget //3<CR>
 
+nmap <Leader>tf :TestFile<CR>
+nmap <Leader>tl :TestLast<CR>
+nmap <Leader>tn :TestNearest<CR>
+nmap <Leader>ts :TestSuite<CR>
+nmap <Leader>to :TestVisit<CR>
+
 " Quick edit and source vimrc
 nnoremap <silent> <Leader>, :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>,e :e $MYVIMRC<CR>

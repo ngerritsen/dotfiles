@@ -34,6 +34,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'mhartington/oceanic-next'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sainnhe/sonokai'
+Plug 'joshdick/onedark.vim'
 
 " Programming
 Plug 'dense-analysis/ale'
@@ -47,5 +49,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'kburdett/vim-nuuid'
+Plug 'vim-test/vim-test'
 
 call plug#end()
