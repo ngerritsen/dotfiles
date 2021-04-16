@@ -9,8 +9,8 @@ set undofile
 set hidden
 set nowrap
 set nohlsearch
-set timeoutlen=320
-set timeoutlen=10
+set timeoutlen=500
+set ttimeoutlen=10
 
 " Interface
 set number

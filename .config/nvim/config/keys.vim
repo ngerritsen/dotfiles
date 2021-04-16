@@ -27,6 +27,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <Leader>- :resize -10<CR>
+nnoremap <Leader>= :resize +10<CR>
+nnoremap <Leader>] :vertical resize +10<CR>
+nnoremap <Leader>[ :vertical resize -10<CR>
+
 let g:camelcasemotion_key = '<leader>'
 
 " No newbie keys allowed
