@@ -3,9 +3,12 @@
 " Vim Rooter
 let g:rooter_patterns = ['>Projects']
 
+" NNN
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.7, 'highlight': 'Debug' } }
+
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -54,7 +57,8 @@ let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinSize=45
+let g:NERDTreeWinSize=40
+let NERDTreeQuitOnOpen=1
 
 " Start NERDTree and Startify when Vim starts without any argument.
 " autocmd VimEnter *

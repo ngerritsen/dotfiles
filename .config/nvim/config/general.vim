@@ -4,13 +4,14 @@
 set noswapfile
 set nobackup
 set nowritebackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undo
 set undofile
 set hidden
 set nowrap
 set nohlsearch
 set timeoutlen=500
 set ttimeoutlen=10
+set history=1000
 
 " Interface
 set number
@@ -40,4 +41,4 @@ set t_ZR=^[[23m
 set t_Co=256
 set termguicolors
 
-colorscheme dracula
+colorscheme gruvbox

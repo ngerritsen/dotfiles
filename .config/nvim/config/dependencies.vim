@@ -25,6 +25,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mhinz/vim-startify'
 Plug 'itchyny/lightline.vim'
+Plug 'mcchrish/nnn.vim'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
