@@ -4,7 +4,10 @@
 let g:rooter_patterns = ['>Projects']
 
 " NNN
+let g:nnn#command = 'nnn -H'
 let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.7, 'highlight': 'Debug' } }
+let g:nnn#action = {
+      \ '<C-v>': 'vsplit' }
 
 " Lightline
 let g:lightline = {

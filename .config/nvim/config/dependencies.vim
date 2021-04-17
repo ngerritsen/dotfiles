@@ -38,6 +38,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sainnhe/sonokai'
 Plug 'joshdick/onedark.vim'
+Plug 'romgrk/doom-one.vim'
 
 " Programming
 Plug 'dense-analysis/ale'

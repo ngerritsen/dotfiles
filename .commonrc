@@ -36,7 +36,11 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
 alias fs='fortune | cowsay | lolcat'
-alias pr="open $(git remote get-url upstream)"
+
+function gh()
+{
+  open "$(git remote get-url upstream)"
+}
 
 exists ()
 {
@@ -76,6 +80,7 @@ fi
 # Better vim
 if exists nvim
 then
+  alias v="nvim"
   alias vi="nvim"
   alias vim="nvim"
   export EDITOR=nvim
