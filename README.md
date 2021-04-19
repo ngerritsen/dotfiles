@@ -55,3 +55,29 @@ Then `:PlugInstall` can be run in Vim & NeoVim.
 ### Zoxide
 
 [Zoxide](https://github.com/ajeetdsouza/zoxide) is a faster way to navigate the filesystem from the command line and serves as an alternative to `cd`. Make sure it is installed and it will be enabled automatically in bash and zsh.
+
+
+### Slack themes
+
+*Gruvbox*
+
+```
+#282828,#3c3836,#98971a,#fbf1c7,#3E313C,#EBDBB2,#b8bb26,#fb4934
+```
+
+*Dracula*
+
+```
+#282A36,#44475A,#44475A,#8BE9FD,#6272A4,#FFFFFF,#50FA7B,#FF5555
+```
+
+*Nord*
+```
+#2E3440,#3B4252,#88C0D0,#2E3440,#3B4252,#D8DEE9,#A3BE8C,#81A1C1
+```
+
+*Spaceduck*
+
+```
+#0f111b,#7A5CCC,#7A5CCC,#ffffff,#16172D,#ecf0c1,#5CCC96,#00A3CC,#0f111b,#ecf0c1
+```
