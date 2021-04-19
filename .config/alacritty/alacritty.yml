@@ -7,9 +7,9 @@ window:
 
 font:
   normal:
-    family: "Hack NF"
+    family: "FiraCode NF"
 
-  size: 13
+  size: 14
 
 import:
-  - ~/.config/alacritty/themes/gruvbox.yml
+  - ~/.config/alacritty/themes/onedark.yml
