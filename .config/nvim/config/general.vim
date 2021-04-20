@@ -41,4 +41,4 @@ set t_ZR=^[[23m
 set t_Co=256
 set termguicolors
 
-colorscheme onedark
+colorscheme nord

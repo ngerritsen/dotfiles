@@ -2,14 +2,12 @@ window:
   padding:
     x: 12
     y: 12
-  decorations: none
-  startup_mode: Maximized
 
 font:
   normal:
-    family: "FiraCode NF"
+    family: "Hack NF"
 
   size: 13
 
 import:
-  - ~/.config/alacritty/themes/onedark.yml
+  - ~/.config/alacritty/themes/nord.yml

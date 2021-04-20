@@ -21,12 +21,11 @@ nnoremap <silent> <Leader>, :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>,e :e $MYVIMRC<CR>
 nnoremap <silent> <Leader>,s :source $MYVIMRC<CR>
 
-" Splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" Quickfix lists
+nnoremap <silent> <C-j> :cnext<CR>
+nnoremap <silent> <C-k> :cprev<CR>
 
+" Splits
 nnoremap <Leader>- :resize -10<CR>
 nnoremap <Leader>= :resize +10<CR>
 nnoremap <Leader>] :vertical resize +10<CR>
