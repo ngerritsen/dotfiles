@@ -33,12 +33,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'mhartington/oceanic-next'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'sainnhe/sonokai'
 Plug 'joshdick/onedark.vim'
-Plug 'romgrk/doom-one.vim'
 
 " Programming
 Plug 'dense-analysis/ale'

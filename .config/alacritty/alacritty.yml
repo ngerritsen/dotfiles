@@ -9,7 +9,7 @@ font:
   normal:
     family: "FiraCode NF"
 
-  size: 14
+  size: 13
 
 import:
   - ~/.config/alacritty/themes/onedark.yml
