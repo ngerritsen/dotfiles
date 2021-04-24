@@ -20,7 +20,7 @@ then
 fi
 
 # Rust
-if [ -d "$HOME/.cargo/env" ]
+if [ -f "$HOME/.cargo/env" ]
 then
   source "$HOME/.cargo/env"
 fi
@@ -63,6 +63,7 @@ fi
 # Better file viewer
 if exists bat
 then
+  export BAT_THEME="ansi-dark"
   alias cat='bat'
 fi
 
@@ -98,4 +99,7 @@ then
   eval "$(zoxide init zsh)"
 fi
 
-neofetch
+if exists neofetch
+then
+  neofetch
+fi

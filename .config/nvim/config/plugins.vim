@@ -11,7 +11,7 @@ let g:nnn#action = {
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -60,15 +60,14 @@ let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinSize=40
-let NERDTreeQuitOnOpen=1
+let g:NERDTreeWinSize=45
 
 " Start NERDTree and Startify when Vim starts without any argument.
-" autocmd VimEnter *
-"     \   if !argc()
-"     \ |   Startify
-"     \ |   NERDTree
-"     \ |   wincmd w
+autocmd VimEnter *
+    \   if !argc()
+    \ |   Startify
+    \ |   NERDTree
+    \ |   wincmd w
 "     \ | endif
 
 " Start NERDTree when Vim starts with a directory argument.

@@ -23,10 +23,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-startify'
 Plug 'itchyny/lightline.vim'
-Plug 'mcchrish/nnn.vim'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
