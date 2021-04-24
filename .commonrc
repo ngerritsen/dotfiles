@@ -87,7 +87,8 @@ then
   alias vim="nvim"
   export EDITOR=nvim
   export VISUAL=nvim
-
+else
+  alias v="vim"
 fi
 
 # Add default flags

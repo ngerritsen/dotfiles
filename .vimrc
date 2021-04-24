@@ -24,7 +24,6 @@ set number
 set relativenumber
 set colorcolumn=100
 set laststatus=2
-set signcolumn=yes
 set cursorline
 set noshowmode
 
