@@ -32,7 +32,7 @@ alias nf="neofetch"
 alias pf="pfetch"
 
 # Utilities
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
 alias fs='fortune | cowsay | lolcat'
