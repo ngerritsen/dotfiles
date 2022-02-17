@@ -35,7 +35,7 @@ Install appropriate patched fonts from: [Nerd Fonts](https://www.nerdfonts.com/)
 To make the tmux theme and plugins work install the tmux plugin manager ([tmp](https://github.com/tmux-plugins/tpm)) by running
 
 ```
-sh ~/.scripts/tmp/sh
+sh ~/.scripts/tmp.sh
 ```
 
 ### Vim
