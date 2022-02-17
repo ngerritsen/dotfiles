@@ -30,6 +30,15 @@ chsh -s $(which zsh)
 
 Install appropriate patched fonts from: [Nerd Fonts](https://www.nerdfonts.com/) ([Installation instructions](https://github.com/ryanoasis/nerd-fonts#font-installation))
 
+### Git user
+
+The git config doesn't come with a user out of the box to avoid users getting mixed up, this still needs to be configured afterwards using:
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+```
+
 ### Tmux
 
 To make the tmux theme and plugins work install the tmux plugin manager ([tmp](https://github.com/tmux-plugins/tpm)) by running
@@ -50,7 +59,9 @@ Then `:PlugInstall` can be run in Vim & NeoVim.
 
 ### Alacritty
 
-[Alacritty](https://github.com/alacritty/alacritty) is an amazing terminal Emulator for Mac and Linux. Note that when it is installed the Font might be broken. Make sure to install the correct font from [Nerd Fonts](https://www.nerdfonts.com/).
+[Alacritty](https://github.com/alacritty/alacritty) is an amazing terminal Emulator for Mac and Linux.
+
+> Note that when it is installed the Font might be broken. Make sure to install the correct font from [Nerd Fonts](https://www.nerdfonts.com/).
 
 ### Command line tools
 
