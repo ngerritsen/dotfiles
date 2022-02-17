@@ -51,9 +51,9 @@ exists ()
 # Better file listing
 if exists exa
 then
-  alias ls='exa -l --group-directories-first'
+  alias ls='exa -lh --git --group-directories-first'
   alias la='exa -a --group-directories-first'
-  alias ll='exa -la --group-directories-first'
+  alias ll='exa -lha --git --group-directories-first'
   alias lt='exa -aT --group-directories-first'
   alias tree="exa --tree --group-directories-first"
 else
