@@ -52,38 +52,34 @@ Then `:PlugInstall` can be run in Vim & NeoVim.
 
 [Alacritty](https://github.com/alacritty/alacritty) is an amazing terminal Emulator for Mac and Linux. Note that when it is installed the Font might be broken. Make sure to install the correct font from [Nerd Fonts](https://www.nerdfonts.com/).
 
-### Zoxide
+### Command line tools
+
+For MacOS `sh ./scripts/macos-install.sh` can be ran to install most tools.
+
+#### Zoxide
 
 [Zoxide](https://github.com/ajeetdsouza/zoxide) is a faster way to navigate the filesystem from the command line and serves as an alternative to `cd`. Make sure it is installed and it will be enabled automatically in bash and zsh.
 
+#### Exa
 
-### Slack themes
+[Exa](https://the.exa.website/) is a modern replacement of `ls`. If it's installed it will be aliased to `ls`.
 
-*Gruvbox*
+#### Bat
 
-```
-#282828,#3c3836,#98971a,#fbf1c7,#3E313C,#EBDBB2,#b8bb26,#fb4934,#3c3836,#EBDBB2
-```
+[Bat](https://github.com/sharkdp/bat) is a modern replacement of `cat`. If it's installed it will be aliased to `cat`.
 
-*Dracula*
+#### Ncdu
 
-```
-#282A36,#44475A,#44475A,#8BE9FD,#6272A4,#FFFFFF,#50FA7B,#FF5555,#44475A,#FFFFFF
-```
+[Ncdu](https://dev.yorhel.nl/ncdu) is a modern replacement of `du`. If it's installed it will be aliased to `du`.
 
-*Nord*
-```
-#2E3440,#3B4252,#88C0D0,#2E3440,#3B4252,#D8DEE9,#A3BE8C,#81A1C1,#3B4252,#D8DEE9
-```
+#### Pretty ping
 
-*Spaceduck*
+[Pretty ping](https://github.com/denilsonsa/prettyping) is a wrapper of `ping` that makes it prettier. If it's installed it will be aliased to `ping`.
 
-```
-#0f111b,#7A5CCC,#7A5CCC,#ffffff,#16172D,#ecf0c1,#5CCC96,#00A3CC,#0f111b,#ecf0c1
-```
+#### Neofetch
 
-*One Dark*
+[Neofetch](https://github.com/dylanaraps/neofetch) prints your system information in a pretty format. If installed every terminal will start with it.
 
-```
-#21252B,#272C33,#31363F,#D7DAE0,#272C33,#D7DAE0,#20B684,#528BFF,#272C33,#D7DAE0
-```
+#### Pfetch
+
+[Pfetch](https://github.com/dylanaraps/pfetch) prints your system information in a pretty format, it's a lightweight alternative to neofetch. If installed every terminal will start with it unless neofetch is installed.
