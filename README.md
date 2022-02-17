@@ -1,6 +1,6 @@
 # Dotfiles
 
-Dotfiles of Niels Gerritsen.
+Dotfiles of Niels Gerritsen. You can use this repository directly or fork/copy it to your own to customize it.
 
 ## Usage
 
