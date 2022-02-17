@@ -103,4 +103,7 @@ fi
 if exists neofetch
 then
   neofetch
+elif exists pfetch
+then
+  pfetch
 fi
