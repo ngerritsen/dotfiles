@@ -40,11 +40,18 @@ for key in ['<Up>', '<Down>', '<Left>', '<Right>']
   exec 'inoremap' key '<Nop>'
 endfor
 
-" Fz
-nnoremap <silent> <C-p> :GFiles<CR>
-nnoremap <silent> <Leader><C-p> :Files<CR>
-nnoremap <silent> <C-s> :Rg<CR>
-nnoremap <silent> <C-e> :History<CR>
+" Fzf
+function! FzfOpen(command_str)
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<c-w>\<c-w>"
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+nnoremap <silent> <C-p> :call FzfOpen(':GFiles')<CR>
+nnoremap <silent> <Leader><C-p> :call FzfOpen(':Files')<CR>
+nnoremap <silent> <C-s> :call FzfOpen(':Rg')<CR>
+nnoremap <silent> <C-e> :call FzfOpen(':History')<CR>
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
