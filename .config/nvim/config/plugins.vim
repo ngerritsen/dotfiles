@@ -3,12 +3,6 @@
 " Vim Rooter
 let g:rooter_patterns = ['>Projects']
 
-" NNN
-let g:nnn#command = 'nnn -H'
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.7, 'highlight': 'Debug' } }
-let g:nnn#action = {
-      \ '<C-v>': 'vsplit' }
-
 " Lightline
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
@@ -85,10 +79,18 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+" vim-go
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
 " Ale
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'go': ['remove_trailing_lines', 'trim_whitespace'],
       \   'javascript': ['prettier', 'eslint'],
       \   'typescript': ['prettier', 'eslint'],
       \   'typescriptreact': ['prettier', 'eslint'],

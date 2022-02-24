@@ -53,6 +53,9 @@ nnoremap <silent> <Leader><C-p> :call FzfOpen(':Files')<CR>
 nnoremap <silent> <C-s> :call FzfOpen(':Rg')<CR>
 nnoremap <silent> <C-e> :call FzfOpen(':History')<CR>
 
+" Previous file
+nnoremap <silent> <C-e><C-e> <C-^>
+
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
 

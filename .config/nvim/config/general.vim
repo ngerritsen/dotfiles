@@ -23,10 +23,15 @@ set cursorline
 set noshowmode
 
 " Tabs
-set tabstop=2
+set tabstop=8
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 set smartindent
+
+" Tabs per language
+autocmd FileType html setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 
 " Splits
 set splitbelow
