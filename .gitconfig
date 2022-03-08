@@ -60,3 +60,6 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[user]
+	name = Niels Gerritsen
+	email = n.gerritsen@protonmail.com

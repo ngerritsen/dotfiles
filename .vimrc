@@ -1,7 +1,7 @@
 "    ___       __
 "  /' _ `\   /'_ `\
 "  /\ \/\ \ /\ \L\ \                 Niels Gerritsen
-"  \ \_\ \_\\ \____ \                https://nielsgerritsen.com
+"  \ \_\ \_\\ \____ \                https://gitlab.com
 "   \/_/\/_/ \/___L\ \  _______      https://github.com/ngerritsen/dotfiles
 "              /\____/ /\______\
 "              \_/__/  \/______/
@@ -47,10 +47,10 @@ cnoremap <silent> jj <Esc>
 vnoremap <silent> jj <Esc>
 
 " Splits
-nnoremap <Leader>- :resize -10<CR>
-nnoremap <Leader>= :resize +10<CR>
-nnoremap <Leader>] :vertical resize +10<CR>
-nnoremap <Leader>[ :vertical resize -10<CR>
+nnoremap <Leader>- :resize -5<CR>
+nnoremap <Leader>= :resize +5<CR>
+nnoremap <Leader>] :vertical resize +5<CR>
+nnoremap <Leader>[ :vertical resize -5<CR>
 
 " Quick edit and source vimrc
 nnoremap <silent> <Leader>, :e $MYVIMRC<CR>

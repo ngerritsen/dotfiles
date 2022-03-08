@@ -1,5 +1,5 @@
-scan_timeout = 5
-add_newline = false
+scan_timeout = 2
+add_newline = true
 
 [line_break]
 disabled = true
@@ -7,13 +7,25 @@ disabled = true
 [aws]
 disabled = true
 
+[cobol]
+disabled = true
+
+[conda]
+disabled = true
+
 [crystal]
 disabled = true
 
-[git_status]
+[cmake]
 disabled = true
 
 [dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[dotnet]
 disabled = true
 
 [docker_context]
@@ -25,25 +37,43 @@ disabled = true
 [elm]
 disabled = true
 
-[erlang]
-disabled = true
-
-[dotnet]
+[golang]
 disabled = true
 
 [java]
 disabled = true
 
-[lua]
+[julia]
+disabled = true
+
+[kotlin]
 disabled = true
 
 [nodejs]
 disabled = true
 
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[ocaml]
+disabled = true
+
 [package]
 disabled = true
 
+[perl]
+disabled = true
+
 [php]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
 disabled = true
 
 [python]
@@ -55,11 +85,11 @@ disabled = true
 [rust]
 disabled = true
 
+[scala]
+disabled = true
+
+[sudo]
+disabled = true
+
 [swift]
-disabled = true
-
-[vagrant]
-disabled = true
-
-[terraform]
 disabled = true

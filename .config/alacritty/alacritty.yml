@@ -8,7 +8,6 @@ window:
 font:
   normal:
     family: "Hack NF"
-
   size: 12
 
 import:
