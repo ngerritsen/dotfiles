@@ -41,17 +41,28 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Packer plugin manager
+	use("nvim-lua/plenary.nvim") -- Utility belt for neovim plugins
 
 	-- General
-	use("nvim-lua/popup.nvim") -- Popups in nvim
-	use("nvim-lua/plenary.nvim") -- Utility belt for neovim plugins
 	use("numToStr/Comment.nvim") -- Easy comments
 	use("windwp/nvim-autopairs") -- Auto insert bracket pairs
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Make comment strings work with JSX
+	use("editorconfig/editorconfig-vim") -- Use editorconfig
+	use("tpope/vim-surround") -- Surround words with symbols
+	use("tpope/vim-fugitive") -- Git helpers
+	use("tpope/vim-eunuch") -- Unix helpers
+	use("mg979/vim-visual-multi") -- Multi cursor
+	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
+	use("kburdett/vim-nuuid") -- Generate UUID's
+	use("vim-test/vim-test") -- Run unit tests
+	use("mattn/emmet-vim") -- Run unit tests
 	use("folke/which-key.nvim") -- Shows keyboard shortcuts
+	use("nvim-lua/popup.nvim") -- Popups in nvim
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
+	use("joshdick/onedark.vim") -- Atom One Dark
+	use("arcticicestudio/nord-vim") -- Nord
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- Core cmp completion plugin
@@ -109,7 +120,6 @@ return packer.startup(function(use)
 	})
 
 	-- Alpha
-
 	use({
 		"goolord/alpha-nvim", -- Startpage
 		requires = { "kyazdani42/nvim-web-devicons" },

@@ -10,6 +10,13 @@ vim.g.maplocalleader = " "
 map("n", "<Leader>se", ":e $MYVIMRC<CR>", opts)
 map("n", "<Leader>sv", ":source $MYVIMRC<CR>", opts)
 
+-- Tests
+map("n", "<Leader>tf", ":TestFile<CR>", opts)
+map("n", "<Leader>tn", ":TestNearest<CR>", opts)
+map("n", "<Leader>tl", ":TestLast<CR>", opts)
+map("n", "<Leader>tg", ":TestVisit<CR>", opts)
+map("n", "<Leader>ta", ":TestSuite<CR>", opts)
+
 -- Navigate Splits
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)

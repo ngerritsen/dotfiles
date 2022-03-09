@@ -8,7 +8,10 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+-- Load vscode style snippets from external plugin
+require("luasnip.loaders.from_vscode").lazy_load({
+	paths = { "./snippets" },
+})
 
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1

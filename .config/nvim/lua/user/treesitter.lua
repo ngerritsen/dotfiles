@@ -8,7 +8,7 @@ configs.setup({
 	sync_install = false,
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = { "php" }, -- Enables regular vim syntax highlighting (for indentation)
+		additional_vim_regex_highlighting = { "php", "twig" }, -- Enables regular vim syntax highlighting (for indentation)
 	},
 	indent = {
 		enable = true,

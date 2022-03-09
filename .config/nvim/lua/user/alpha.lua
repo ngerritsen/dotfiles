@@ -7,7 +7,7 @@ local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
 	[[    ___       __                                                            ]],
-	[[  /'' _ `\ /''_ `\                                                        ]],
+	[[  /'' _ `\ /''_ `\                                                          ]],
 	[[  /\ \/\ \ /\ \L\ \                 Niels Gerritsen                         ]],
 	[[  \ \_\ \_\\ \____ \                https://nielsgerritsen.com              ]],
 	[[   \/_/\/_/ \/___L\ \  _______      https://gitlab.com/ngerritsen/dotfiles  ]],
