@@ -58,11 +58,14 @@ return packer.startup(function(use)
 	use("mattn/emmet-vim") -- Run unit tests
 	use("folke/which-key.nvim") -- Shows keyboard shortcuts
 	use("nvim-lua/popup.nvim") -- Popups in nvim
+	use("moll/vim-bbye") -- Close buffers without closing vim
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
-	use("joshdick/onedark.vim") -- Atom One Dark
-	use("arcticicestudio/nord-vim") -- Nord
+	use("joshdick/onedark.vim") -- Atom One Dark theme
+	use("arcticicestudio/nord-vim") -- Nord theme
+	use("folke/tokyonight.nvim") -- Tokyo Night theme
+	use("shaunsingh/moonlight.nvim") -- Moonlight theme
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- Core cmp completion plugin

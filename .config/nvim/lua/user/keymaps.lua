@@ -35,8 +35,7 @@ map("x", "jj", "<Esc>", opts)
 map("i", "jj", "<Esc>", opts)
 
 -- File explorer
-map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
-map("n", "<C-f>", ":NvimTreeFocus<CR>", opts)
+map("n", "<C-f>", ":NvimTreeFindFileToggle<CR>", opts)
 
 -- Preserve visual paste
 map("v", "p", '"_dP', opts)
@@ -44,6 +43,7 @@ map("v", "p", '"_dP', opts)
 -- Navigate Buffers
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprev<CR>", opts)
+map("n", "<S-w>", ":Bdelete<CR>", opts)
 
 -- Visual indent (stay in indentation mode)
 map("v", "<", "<gv", opts)

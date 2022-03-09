@@ -16,8 +16,6 @@ null_ls.setup({
 		formatting.stylua,
 		diagnostics.stylelint,
 		diagnostics.eslint,
-		diagnostics.phpcs,
-		diagnostics.tsc,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

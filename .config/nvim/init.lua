@@ -1,5 +1,6 @@
 require("user.impatient")
 
+require("user.alpha")
 require("user.autocmd")
 require("user.autopairs")
 require("user.bufferline")
@@ -17,4 +18,3 @@ require("user.plugins")
 require("user.telescope")
 require("user.treesitter")
 require("user.which-key")
-require("user.alpha")

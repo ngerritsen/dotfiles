@@ -24,7 +24,7 @@ nvim_tree.setup({
 		},
 	},
 	update_focused_file = {
-		enable = true,
+		enable = false,
 		update_cwd = true,
 	},
 	git = {
@@ -33,11 +33,10 @@ nvim_tree.setup({
 		timeout = 500,
 	},
 	view = {
-		width = 35,
-		height = 30,
+		width = 34,
 		hide_root_folder = false,
 		side = "left",
-		auto_resize = true,
+		auto_resize = false,
 		number = false,
 		relativenumber = false,
 	},
@@ -46,6 +45,5 @@ nvim_tree.setup({
 		folders = 1,
 		files = 1,
 		folder_arrows = 1,
-		tree_width = 30,
 	},
 })

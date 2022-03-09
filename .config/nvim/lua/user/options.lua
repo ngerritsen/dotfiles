@@ -38,7 +38,7 @@ vim.opt.splitbelow = true -- force all horizontal splits to go below current win
 vim.opt.splitright = true -- force all vertical splits to go to the right of current window
 
 -- Timeouts
-vim.opt.timeoutlen = 500 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
 -- Misc
