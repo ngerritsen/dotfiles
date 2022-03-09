@@ -82,6 +82,9 @@ disabled = true
 [ruby]
 disabled = true
 
+[lua]
+disabled = true
+
 [rust]
 disabled = true
 
