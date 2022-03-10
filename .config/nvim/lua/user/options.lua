@@ -20,7 +20,6 @@ vim.opt.ignorecase = true -- ignore case in search patterns
 
 -- Interface
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for completion
-vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.smartcase = true -- smart casing
 vim.opt.scrolloff = 8 -- space to keep horizontally around cursor

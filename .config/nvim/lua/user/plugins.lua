@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim") -- Shows keyboard shortcuts
 	use("nvim-lua/popup.nvim") -- Popups in nvim
 	use("moll/vim-bbye") -- Close buffers without closing vim
+	use("norcalli/nvim-colorizer.lua") -- Highlight colors codes
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
