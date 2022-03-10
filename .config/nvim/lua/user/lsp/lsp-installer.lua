@@ -15,8 +15,10 @@ lsp_installer.on_server_ready(function(server)
 	end
 
 	if server.name == "intelephense" then
-		local intelephense_opts = require("user.lsp.settings.intelephense")
-		opts = vim.tbl_deep_extend("force", intelephense_opts, opts)
+		local intelephense_status_ok, intelephense_opts = pcall(require, "user.lsp.settings.intelephense")
+		if intelephense_status_ok then
+			opts = vim.tbl_deep_extend("force", intelephense_opts, opts)
+		end
 	end
 
 	if server.name == "sumneko_lua" then
