@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- Popups in nvim
 	use("moll/vim-bbye") -- Close buffers without closing vim
 	use("norcalli/nvim-colorizer.lua") -- Highlight colors codes
+	use("akinsho/toggleterm.nvim") -- Integrated terminal
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
@@ -109,12 +110,6 @@ return packer.startup(function(use)
 	use({
 		"kyazdani42/nvim-tree.lua", -- File explorer
 		requires = { "kyazdani42/nvim-web-devicons" },
-	})
-
-	-- Bufferline
-	use({
-		"akinsho/bufferline.nvim", -- Shows buffers on top as tabs
-		requires = "kyazdani42/nvim-web-devicons",
 	})
 
 	-- Lualine

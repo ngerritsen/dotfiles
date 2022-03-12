@@ -24,7 +24,7 @@ vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.smartcase = true -- smart casing
 vim.opt.scrolloff = 8 -- space to keep horizontally around cursor
 vim.opt.sidescrolloff = 8 -- space to keep veritcally around cursor
-vim.opt.showtabline = 2 -- always show tabs
+vim.opt.showtabline = 0 -- hide tab line
 
 -- Indentation
 vim.opt.expandtab = true -- convert tabs to spaces

@@ -10,24 +10,48 @@ vim.g.maplocalleader = " "
 map("n", "<Leader>se", ":e $MYVIMRC<CR>", opts)
 map("n", "<Leader>sv", ":source $MYVIMRC<CR>", opts)
 
--- Tests
-map("n", "<Leader>tf", ":TestFile<CR>", opts)
-map("n", "<Leader>tn", ":TestNearest<CR>", opts)
-map("n", "<Leader>tl", ":TestLast<CR>", opts)
-map("n", "<Leader>tg", ":TestVisit<CR>", opts)
-map("n", "<Leader>ta", ":TestSuite<CR>", opts)
+-- Keep cursor focus while navigating
+map("n", "n", "nzzzv", opts)
+map("n", "N", "Nzzzv", opts)
+map("n", "J", "mzJ`z", opts)
 
--- Navigate Splits
-map("n", "<C-h>", "<C-w>h", opts)
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
+-- Clear search highlights
+map("n", "<Leader>h", "<cmd>noh<CR>", opts)
+
+-- Terminal
+map("t", "<Esc>", "<C-\\><C-n>", opts)
+
+-- Quickfix list
+map("n", "]q", "<cmd>cnext<CR>", opts)
+map("n", "[q", "<cmd>cprev<CR>", opts)
+map("n", "<Leader>qo", "<cmd>copen<CR>", opts)
+map("n", "<Leader>qc", "<cmd>cclose<CR>", opts)
+
+map("n", "]l", "<cmd>lnext<CR>", opts)
+map("n", "[l", "<cmd>lprev<CR>", opts)
+map("n", "<Leader>lo", "<cmd>lopen<CR>", opts)
+map("n", "<Leader>lc", "<cmd>lclose<CR>", opts)
+
+-- Tests
+map("n", "<Leader>tf", "<cmd>TestFile<CR>", opts)
+map("n", "<Leader>tn", "<cmd>TestNearest<CR>", opts)
+map("n", "<Leader>tl", "<cmd>TestLast<CR>", opts)
+map("n", "<Leader>tg", "<cmd>TestVisit<CR>", opts)
+map("n", "<Leader>ta", "<cmd>TestSuite<CR>", opts)
+
+-- Move lines
+map("v", "<C-j>", "<cmd>m '>+1<CR>gv=gv", opts)
+map("v", "<C-k>", "<cmd>m '>-2<CR>gv=gv", opts)
+map("n", "<C-j>", "<cmd>m .+1<CR>==", opts)
+map("n", "<C-k>", "<cmd>m .-2<CR>==", opts)
+map("i", "<C-j>", "<esc><cmd>m .+1<CR>==", opts)
+map("i", "<C-k>", "<esc><cmd>m .-2<CR>==", opts)
 
 -- Resize Splits
-map("n", "<C-Up>", ":resize -5<CR>", opts)
-map("n", "<C-Down>", ":resize +5<CR>", opts)
-map("n", "<C-Left>", ":vertical resize -5<CR>", opts)
-map("n", "<C-Right>", ":vertical resize +5<CR>", opts)
+map("n", "<Leader>-", "<cmd>resize -5<CR>", opts)
+map("n", "<Leader>=", "<cmd>resize +5<CR>", opts)
+map("n", "<Leader>[", "<cmd>vertical resize -5<CR>", opts)
+map("n", "<Leader>]", "<cmd>vertical resize +5<CR>", opts)
 
 -- Better escape
 map("v", "jj", "<Esc>", opts)
@@ -41,26 +65,19 @@ map("n", "<C-f>", ":NvimTreeFindFileToggle<CR>", opts)
 map("v", "p", '"_dP', opts)
 
 -- Navigate Buffers
-map("n", "<S-l>", ":bnext<CR>", opts)
-map("n", "<S-h>", ":bprev<CR>", opts)
-map("n", "<S-w>", ":Bdelete<CR>", opts)
+map("n", "<S-l>", "<cmd>bnext<CR>", opts)
+map("n", "<S-h>", "<cmd>bprev<CR>", opts)
+map("n", "<S-w>", "<cmd>Bdelete<CR>", opts)
 
 -- Visual indent (stay in indentation mode)
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
--- Move lines
-map("n", "<A-j>", ":m .+1<CR>==", opts)
-map("n", "<A-k>", ":m .-2<CR>==", opts)
-map("v", "<A-j>", ":m .+1<CR>==", opts)
-map("v", "<A-k>", ":m .-2<CR>==", opts)
-map("x", "<A-j>", ":m .+1<CR>==", opts)
-map("x", "<A-k>", ":m .-2<CR>==", opts)
-
 -- Telescope
-map("n", "<C-p>", ":Telescope find_files<cr>", opts)
-map("n", "<C-s>", ":Telescope live_grep<cr>", opts)
-map("n", "<C-e>", ":Telescope oldfiles<cr>", opts)
+map("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
+map("n", "<C-s>", "<cmd>Telescope live_grep<cr>", opts)
+map("n", "<C-e>", "<cmd>Telescope oldfiles<cr>", opts)
+map("n", "<C-q>", "<cmd>Telescope quickfix<cr>", opts)
 
 -- Linting & formatting
 map("n", "<Leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
