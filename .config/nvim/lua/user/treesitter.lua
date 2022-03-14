@@ -8,7 +8,10 @@ configs.setup({
 	sync_install = false,
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = { "php", "twig" }, -- Enables regular vim syntax highlighting (for indentation)
+		additional_vim_regex_highlighting = { "php" }, -- Enables regular vim syntax highlighting (for indentation).
+		disable = {
+			"html", -- Disable Treesitter for HTML as it messes up Twig files (will fallback to default highlighting for HTML).
+		},
 	},
 	indent = {
 		enable = true,

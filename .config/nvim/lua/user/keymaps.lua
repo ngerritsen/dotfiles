@@ -1,14 +1,13 @@
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
-
 -- Leader key
+
 map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Configuration
 map("n", "<Leader>se", ":e $MYVIMRC<CR>", opts)
-map("n", "<Leader>sv", ":source $MYVIMRC<CR>", opts)
 
 -- Keep cursor focus while navigating
 map("n", "n", "nzzzv", opts)
@@ -59,7 +58,8 @@ map("x", "jj", "<Esc>", opts)
 map("i", "jj", "<Esc>", opts)
 
 -- File explorer
-map("n", "<C-f>", ":NvimTreeFindFileToggle<CR>", opts)
+map("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
+map("n", "<Leader><C-f>", ":NvimTreeClose<CR>", opts)
 
 -- Preserve visual paste
 map("v", "p", '"_dP', opts)
@@ -68,6 +68,7 @@ map("v", "p", '"_dP', opts)
 map("n", "<S-l>", "<cmd>bnext<CR>", opts)
 map("n", "<S-h>", "<cmd>bprev<CR>", opts)
 map("n", "<S-w>", "<cmd>Bdelete<CR>", opts)
+map("n", "<Leader><Leader>", "<cmd>e#<CR>", opts)
 
 -- Visual indent (stay in indentation mode)
 map("v", "<", "<gv", opts)

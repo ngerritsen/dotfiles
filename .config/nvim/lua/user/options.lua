@@ -13,6 +13,7 @@ vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would sh
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
+vim.opt.mouse = "a" -- enable mouse in tmux
 
 -- Search
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern

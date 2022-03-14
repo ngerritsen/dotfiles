@@ -3,6 +3,27 @@ if not status_ok then
 	return
 end
 
+vim.g.nvim_tree_icons = {
+	default = "",
+	symlink = "",
+	git = {
+		unstaged = "",
+		staged = "S",
+		unmerged = "",
+		renamed = "➜",
+		deleted = "",
+		untracked = "U",
+		ignored = "◌",
+	},
+	folder = {
+		default = "",
+		open = "",
+		empty = "",
+		empty_open = "",
+		symlink = "",
+	},
+}
+
 nvim_tree.setup({
 	disable_netrw = true,
 	hijack_netrw = true,

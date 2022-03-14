@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use("arcticicestudio/nord-vim") -- Nord theme
 	use("folke/tokyonight.nvim") -- Tokyo Night theme
 	use("shaunsingh/moonlight.nvim") -- Moonlight theme
+	use("ayu-theme/ayu-vim") -- Ayu theme
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- Core cmp completion plugin
@@ -93,6 +94,9 @@ return packer.startup(function(use)
 		"nvim-telescope/telescope.nvim", -- Fuzzy finder
 		requires = { "nvim-lua/plenary.nvim" },
 	})
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("junegunn/fzf")
+	use("junegunn/fzf.vim")
 
 	-- Treesitter
 	use({
