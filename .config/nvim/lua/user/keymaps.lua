@@ -38,6 +38,9 @@ map("n", "<Leader>tl", "<cmd>TestLast<CR>", opts)
 map("n", "<Leader>tg", "<cmd>TestVisit<CR>", opts)
 map("n", "<Leader>ta", "<cmd>TestSuite<CR>", opts)
 
+-- Zen mode
+map("n", "<Leader>z", "<cmd>ZenMode<CR>", opts)
+
 -- Move lines
 map("v", "<C-j>", "<cmd>m '>+1<CR>gv=gv", opts)
 map("v", "<C-k>", "<cmd>m '>-2<CR>gv=gv", opts)

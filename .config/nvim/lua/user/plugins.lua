@@ -45,22 +45,26 @@ return packer.startup(function(use)
 
 	-- General
 	use("numToStr/Comment.nvim") -- Easy comments
+	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
+	use("nvim-lua/popup.nvim") -- Popups in nvim
+
+	-- Utility
+	use("folke/which-key.nvim") -- Shows keyboard shortcuts
+	use("akinsho/toggleterm.nvim") -- Integrated terminal
+	use("folke/zen-mode.nvim") -- Zen mode
+	use("kburdett/vim-nuuid") -- Generate UUID's
+	use("vim-test/vim-test") -- Run unit tests
+	use("norcalli/nvim-colorizer.lua") -- Highlight colors codes
+	use("tpope/vim-fugitive") -- Git helpers
+	use("tpope/vim-eunuch") -- Unix helpers
+
+	-- Editing
 	use("windwp/nvim-autopairs") -- Auto insert bracket pairs
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Make comment strings work with JSX
 	use("editorconfig/editorconfig-vim") -- Use editorconfig
 	use("tpope/vim-surround") -- Surround words with symbols
-	use("tpope/vim-fugitive") -- Git helpers
-	use("tpope/vim-eunuch") -- Unix helpers
 	use("mg979/vim-visual-multi") -- Multi cursor
-	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
-	use("kburdett/vim-nuuid") -- Generate UUID's
-	use("vim-test/vim-test") -- Run unit tests
 	use("mattn/emmet-vim") -- Run unit tests
-	use("folke/which-key.nvim") -- Shows keyboard shortcuts
-	use("nvim-lua/popup.nvim") -- Popups in nvim
-	use("moll/vim-bbye") -- Close buffers without closing vim
-	use("norcalli/nvim-colorizer.lua") -- Highlight colors codes
-	use("akinsho/toggleterm.nvim") -- Integrated terminal
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
@@ -69,6 +73,7 @@ return packer.startup(function(use)
 	use("folke/tokyonight.nvim") -- Tokyo Night theme
 	use("shaunsingh/moonlight.nvim") -- Moonlight theme
 	use("ayu-theme/ayu-vim") -- Ayu theme
+	use("drewtempelmeyer/palenight.vim") -- Palenight theme
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- Core cmp completion plugin
