@@ -74,6 +74,7 @@ return packer.startup(function(use)
 	use("shaunsingh/moonlight.nvim") -- Moonlight theme
 	use("ayu-theme/ayu-vim") -- Ayu theme
 	use("drewtempelmeyer/palenight.vim") -- Palenight theme
+	use({ "dracula/vim", as = "dracula" }) -- Dracula theme
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- Core cmp completion plugin

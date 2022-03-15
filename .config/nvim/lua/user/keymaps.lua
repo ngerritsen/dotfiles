@@ -6,6 +6,11 @@ map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Better escape
+map("v", "jj", "<Esc>", opts)
+map("x", "jj", "<Esc>", opts)
+map("i", "jj", "<Esc>", opts)
+
 -- Configuration
 map("n", "<Leader>se", ":e $MYVIMRC<CR>", opts)
 
@@ -55,11 +60,6 @@ map("n", "<Leader>=", "<cmd>resize +5<CR>", opts)
 map("n", "<Leader>[", "<cmd>vertical resize -5<CR>", opts)
 map("n", "<Leader>]", "<cmd>vertical resize +5<CR>", opts)
 
--- Better escape
-map("v", "jj", "<Esc>", opts)
-map("x", "jj", "<Esc>", opts)
-map("i", "jj", "<Esc>", opts)
-
 -- File explorer
 map("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
 map("n", "<Leader><C-f>", ":NvimTreeClose<CR>", opts)
@@ -69,8 +69,8 @@ map("v", "p", '"_dP', opts)
 
 -- Navigate Buffers
 map("n", "<S-l>", "<cmd>bnext<CR>", opts)
-map("n", "<S-h>", "<cmd>bprev<CR>", opts)
 map("n", "<S-w>", "<cmd>Bdelete<CR>", opts)
+map("n", "<S-h>", "<cmd>bprev<CR>", opts)
 map("n", "<Leader><Leader>", "<cmd>e#<CR>", opts)
 
 -- Visual indent (stay in indentation mode)

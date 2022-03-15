@@ -14,7 +14,6 @@ set undodir=~/.vim/undo
 set undofile
 set hidden
 set nowrap
-set nohlsearch
 set timeoutlen=700
 set ttimeoutlen=10
 set history=1000
@@ -22,10 +21,7 @@ set history=1000
 " Interface
 set number
 set relativenumber
-set colorcolumn=100
 set laststatus=2
-set signcolumn=yes
-set cursorline
 set noshowmode
 
 " Tabs
@@ -58,29 +54,57 @@ inoremap <silent> jj <Esc>
 cnoremap <silent> jj <Esc>
 vnoremap <silent> jj <Esc>
 
-" Quick edit and source vimrc
-nnoremap <silent> <Leader>, :e $MYVIMRC<CR>
-nnoremap <silent> <Leader>,e :e $MYVIMRC<CR>
-nnoremap <silent> <Leader>,s :source $MYVIMRC<CR>
+" Configuration
+nnoremap <Leader>se :e $MYVIMRC<CR>
+
+" Keep cursor focus while navigating
+nnoremap <silent> n nzzzv
+nnoremap <silent> N Nzzzv
+nnoremap <silent> J mzJ`z
+
+" Terminal
+tnoremap <Esc> <C-\><C-n>
+
+" Terminal
+tnoremap <Leader>h :noh<CR>
 
 " Quickfix lists
-nnoremap <silent> <C-j> :cnext<CR>
-nnoremap <silent> <C-k> :cprev<CR>
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprev<CR>
+nnoremap <silent> <Leader>qo :copen<CR>
+nnoremap <silent> <Leader>qc :cclose<CR>
 
-" Splits
+nnoremap <silent> ]l :lnext<CR>
+nnoremap <silent> [l :lprev<CR>
+nnoremap <silent> <Leader>lo :lopen<CR>
+nnoremap <silent> <Leader>lc :lclose<CR>
+
+" Move lines
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Resize Splits
 nnoremap <Leader>- :resize -10<CR>
 nnoremap <Leader>= :resize +10<CR>
 nnoremap <Leader>] :vertical resize +10<CR>
 nnoremap <Leader>[ :vertical resize -10<CR>
 
-" CamelcaseMotion
-let g:camelcasemotion_key = '<leader>'
+" File explorer
+nnoremap <C-f> :Explore<CR>
 
-" Previous file
-nnoremap <silent> <C-e><C-e> <C-^>
+" Preserve visual paste
+vnoremap p "_dP
 
-" No newbie keys allowed
-for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-  exec 'noremap' key '<Nop>'
-  exec 'inoremap' key '<Nop>'
-endfor
+" Navigate buffers
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-w> :bdelete<CR>
+nnoremap <S-h> :bprev<CR>
+nnoremap <Leader><Leader> :e#<CR>
+
+" Visual indent (stay in indentation mode)
+vnoremap < <gv
+vnoremap > >gv
