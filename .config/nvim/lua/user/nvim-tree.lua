@@ -25,14 +25,9 @@ vim.g.nvim_tree_icons = {
 }
 
 nvim_tree.setup({
-	disable_netrw = true,
+	disable_netrw = false,
 	hijack_netrw = true,
 	open_on_setup = false,
-	ignore_ft_on_setup = {
-		"startify",
-		"dashboard",
-		"alpha",
-	},
 	auto_close = true,
 	update_cwd = true,
 	diagnostics = {
@@ -57,9 +52,14 @@ nvim_tree.setup({
 		width = 34,
 		hide_root_folder = false,
 		side = "left",
-		auto_resize = false,
+		auto_resize = true,
 		number = false,
 		relativenumber = false,
+	},
+	actions = {
+		open_file = {
+			resize_windw = true,
+		},
 	},
 	show_icons = {
 		git = 1,

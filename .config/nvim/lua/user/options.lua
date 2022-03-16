@@ -43,3 +43,11 @@ vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
 -- Misc
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
+
+-- Folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldnestmax = 3
+vim.opt.foldlevel = 3
+
+-- Quickscope
+vim.g["qs_highlight_on_keys"] = { "f", "F", "t", "T" }

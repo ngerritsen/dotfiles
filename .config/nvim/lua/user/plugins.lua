@@ -1,5 +1,4 @@
 local fn = vim.fn
-
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -65,6 +64,7 @@ return packer.startup(function(use)
 	use("tpope/vim-surround") -- Surround words with symbols
 	use("mg979/vim-visual-multi") -- Multi cursor
 	use("mattn/emmet-vim") -- Run unit tests
+	use("unblevable/quick-scope") -- Highlight unique characters for faster f motions
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever

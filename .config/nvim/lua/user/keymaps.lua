@@ -62,7 +62,7 @@ map("n", "<Leader>]", "<cmd>vertical resize +5<CR>", opts)
 
 -- File explorer
 map("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
-map("n", "<Leader><C-f>", ":NvimTreeClose<CR>", opts)
+map("n", "<Leader>f", ":NvimTreeClose<CR>", opts)
 
 -- Preserve visual paste
 map("v", "p", '"_dP', opts)

@@ -6,14 +6,14 @@ end
 local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val = {
-	[[    ___       __                                                            ]],
-	[[  /'' _ `\ /''_ `\                                                          ]],
-	[[  /\ \/\ \ /\ \L\ \                 Niels Gerritsen                         ]],
-	[[  \ \_\ \_\\ \____ \                https://nielsgerritsen.com              ]],
-	[[   \/_/\/_/ \/___L\ \  _______      https://gitlab.com/ngerritsen/dotfiles  ]],
-	[[              /\____/ /\______\                                             ]],
-	[[              \_/__/  \/______/                                             ]],
-	[[                                                                            ]],
+	[[    ___       __                 ]],
+	[[  /'' _ `\ /''_ `\               ]],
+	[[  /\ \/\ \ /\ \L\ \              ]],
+	[[  \ \_\ \_\\ \____ \             ]],
+	[[   \/_/\/_/ \/___L\ \  _______   ]],
+	[[              /\____/ /\______\  ]],
+	[[              \_/__/  \/______/  ]],
+	[[                                 ]],
 }
 
 dashboard.section.buttons.val = {
@@ -33,7 +33,7 @@ end
 dashboard.section.footer.val = footer()
 
 dashboard.section.footer.opts.hl = "Type"
-dashboard.section.header.opts.hl = "Include"
+dashboard.section.header.opts.hl = "Directory"
 dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
