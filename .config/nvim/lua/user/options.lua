@@ -16,7 +16,7 @@ vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.mouse = "a" -- enable mouse in tmux
 
 -- Search
-vim.opt.hlsearch = true -- highlight all matches on previous search pattern
+vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
 
 -- Interface

@@ -19,9 +19,6 @@ map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
 map("n", "J", "mzJ`z", opts)
 
--- Clear search highlights
-map("n", "<Leader>h", "<cmd>noh<CR>", opts)
-
 -- Terminal
 map("t", "<Esc>", "<C-\\><C-n>", opts)
 
@@ -43,9 +40,6 @@ map("n", "<Leader>tl", "<cmd>TestLast<CR>", opts)
 map("n", "<Leader>tg", "<cmd>TestVisit<CR>", opts)
 map("n", "<Leader>ta", "<cmd>TestSuite<CR>", opts)
 
--- Zen mode
-map("n", "<Leader>z", "<cmd>ZenMode<CR>", opts)
-
 -- Move lines
 map("v", "<C-j>", "<cmd>m '>+1<CR>gv=gv", opts)
 map("v", "<C-k>", "<cmd>m '>-2<CR>gv=gv", opts)
@@ -55,10 +49,10 @@ map("i", "<C-j>", "<esc><cmd>m .+1<CR>==", opts)
 map("i", "<C-k>", "<esc><cmd>m .-2<CR>==", opts)
 
 -- Resize Splits
-map("n", "<Leader>-", "<cmd>resize -5<CR>", opts)
-map("n", "<Leader>=", "<cmd>resize +5<CR>", opts)
-map("n", "<Leader>[", "<cmd>vertical resize -5<CR>", opts)
-map("n", "<Leader>]", "<cmd>vertical resize +5<CR>", opts)
+map("n", "<C-w>-", "<cmd>resize -8<CR>", opts)
+map("n", "<C-w>=", "<cmd>resize +8<CR>", opts)
+map("n", "<C-w>[", "<cmd>vertical resize -8<CR>", opts)
+map("n", "<C-w>]", "<cmd>vertical resize +8<CR>", opts)
 
 -- File explorer
 map("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
@@ -84,5 +78,5 @@ map("n", "<C-e>", "<cmd>Telescope oldfiles<cr>", opts)
 map("n", "<C-q>", "<cmd>Telescope quickfix<cr>", opts)
 
 -- Linting & formatting
-map("n", "<Leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
-map("n", "<Leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
+map("n", "<Leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+map("n", "<Leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)

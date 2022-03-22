@@ -1,6 +1,4 @@
 local fn = vim.fn
--- Automatically install packer
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = fn.system({
 		"git",
@@ -9,8 +7,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		"1",
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
+		print("Installing packer close and reopen Neovim..."),
 	})
-	print("Installing packer close and reopen Neovim...")
 	vim.cmd([[packadd packer.nvim]])
 end
 
@@ -45,16 +43,13 @@ return packer.startup(function(use)
 	-- General
 	use("numToStr/Comment.nvim") -- Easy comments
 	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
-	use("nvim-lua/popup.nvim") -- Popups in nvim
 
 	-- Utility
-	use("folke/which-key.nvim") -- Shows keyboard shortcuts
-	use("akinsho/toggleterm.nvim") -- Integrated terminal
-	use("folke/zen-mode.nvim") -- Zen mode
 	use("kburdett/vim-nuuid") -- Generate UUID's
 	use("vim-test/vim-test") -- Run unit tests
 	use("norcalli/nvim-colorizer.lua") -- Highlight colors codes
 	use("tpope/vim-fugitive") -- Git helpers
+	use("tpope/vim-rhubarb") -- GitHub helpers
 	use("tpope/vim-eunuch") -- Unix helpers
 
 	-- Editing
@@ -64,16 +59,10 @@ return packer.startup(function(use)
 	use("tpope/vim-surround") -- Surround words with symbols
 	use("mg979/vim-visual-multi") -- Multi cursor
 	use("mattn/emmet-vim") -- Run unit tests
-	use("unblevable/quick-scope") -- Highlight unique characters for faster f motions
+	use("ggandor/lightspeed.nvim") -- Lightspeed movement
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
-	use("joshdick/onedark.vim") -- Atom One Dark theme
-	use("arcticicestudio/nord-vim") -- Nord theme
-	use("folke/tokyonight.nvim") -- Tokyo Night theme
-	use("shaunsingh/moonlight.nvim") -- Moonlight theme
-	use("ayu-theme/ayu-vim") -- Ayu theme
-	use("drewtempelmeyer/palenight.vim") -- Palenight theme
 	use({ "dracula/vim", as = "dracula" }) -- Dracula theme
 
 	-- Completion
@@ -101,8 +90,6 @@ return packer.startup(function(use)
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-	use("junegunn/fzf")
-	use("junegunn/fzf.vim")
 
 	-- Treesitter
 	use({
@@ -125,12 +112,6 @@ return packer.startup(function(use)
 	-- Lualine
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
-
-	-- Alpha
-	use({
-		"goolord/alpha-nvim", -- Startpage
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
