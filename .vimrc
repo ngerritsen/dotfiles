@@ -51,8 +51,6 @@ let mapleader = "\<space>"
 
 " Better Escape
 inoremap <silent> jj <Esc>
-cnoremap <silent> jj <Esc>
-vnoremap <silent> jj <Esc>
 
 " Configuration
 nnoremap <Leader>se :e $MYVIMRC<CR>

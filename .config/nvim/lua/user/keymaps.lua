@@ -7,8 +7,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Better escape
-map("v", "jj", "<Esc>", opts)
-map("x", "jj", "<Esc>", opts)
 map("i", "jj", "<Esc>", opts)
 
 -- Configuration
@@ -56,7 +54,7 @@ map("n", "<C-w>]", "<cmd>vertical resize +8<CR>", opts)
 
 -- File explorer
 map("n", "<C-f>", ":NvimTreeFindFile<CR>", opts)
-map("n", "<Leader>f", ":NvimTreeClose<CR>", opts)
+map("n", "<Leader>f", ":NvimTreeToggle<CR>", opts)
 
 -- Preserve visual paste
 map("v", "p", '"_dP', opts)
