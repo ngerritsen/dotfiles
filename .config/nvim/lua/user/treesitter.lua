@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = "maintained",
+	ensure_installed = { "php", "java", "javascript", "typescript", "json", "yaml", "dockerfile", "go", "html", "twig", "markdown", "lua" },
 	sync_install = false,
 	highlight = {
 		enable = true,

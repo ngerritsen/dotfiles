@@ -1,5 +1,6 @@
 require("user.impatient")
 require("user.options")
+require("user.plugins")
 
 require("user.autocmd")
 require("user.autopairs")
@@ -13,6 +14,5 @@ require("user.keymaps")
 require("user.nvim-tree")
 require("user.lsp")
 require("user.lualine")
-require("user.plugins")
 require("user.telescope")
 require("user.treesitter")
