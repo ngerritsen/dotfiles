@@ -44,6 +44,14 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Packer plugin manager
 	use("nvim-lua/plenary.nvim") -- Utility belt for neovim plugins
 
+	use {
+		'goolord/alpha-nvim',
+		requires = { 'nvim-tree/nvim-web-devicons' },
+		config = function ()
+				require'alpha'.setup(require'alpha.themes.startify'.config)
+		end
+	} -- Start screen
+
 	-- General
 	use("numToStr/Comment.nvim") -- Easy comments
 	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
