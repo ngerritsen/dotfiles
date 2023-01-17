@@ -4,6 +4,8 @@ local M = {}
 local disable_formatting = {
 	"tsserver",
 	"jsonls",
+	"gopls",
+	"sumneko_lua",
 }
 
 M.setup = function()
@@ -86,7 +88,7 @@ end
 M.on_attach = function(client, bufnr)
 	for _, name in pairs(disable_formatting) do
 		if client.name == name then
-			client.server_capabilities.document_formatting = false
+			client.server_capabilities.documentFormattingProvider = false
 			break
 		end
 	end

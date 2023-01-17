@@ -75,6 +75,8 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim") -- Best colorscheme ever
+	use({ "catppuccin/nvim", as = "catppuccin" }) -- Cats!!
+	use("arcticicestudio/nord-vim") -- Brrr
 	use({ "dracula/vim", as = "dracula" }) -- Dracula theme
 
 	-- Completion

@@ -8,6 +8,7 @@ vim.g.maplocalleader = " "
 
 -- Better escape
 map("i", "jj", "<Esc>", opts)
+map("i", "jk", "<Esc>", opts)
 
 -- Configuration
 map("n", "<Leader>se", ":e $MYVIMRC<CR>", opts)
@@ -77,4 +78,4 @@ map("n", "<C-q>", "<cmd>Telescope quickfix<cr>", opts)
 
 -- Linting & formatting
 map("n", "<Leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-map("n", "<Leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+map("n", "<Leader>lf", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opts)

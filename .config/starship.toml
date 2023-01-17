@@ -25,6 +25,9 @@ disabled = true
 [deno]
 disabled = true
 
+[gcloud]
+disabled = true
+
 [dotnet]
 disabled = true
 

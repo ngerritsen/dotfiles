@@ -3,4 +3,11 @@ if not status_ok then
 	return
 end
 
-require("nvim-tree").setup()
+nvim_tree.setup({
+	git = {
+		ignore = false
+	},
+	view = {
+		adaptive_size = true
+	}
+})

@@ -14,6 +14,7 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.gofmt,
 		formatting.stylua,
+		formatting.rustfmt,
 		diagnostics.eslint,
 	},
 	on_attach = function(client)

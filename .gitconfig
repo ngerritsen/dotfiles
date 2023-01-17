@@ -1,6 +1,5 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less
 [push]
 	default = current
 [alias]
@@ -27,31 +26,39 @@
 	ma = merge --abort
 	p = push origin
 	pl = pull origin master
+	plm = pull origin main
 	plu = pull upstream master
 	plr = pull --rebase origin master
+	plrm = pull --rebase origin main
 	plru = pull --rebase upstream master
 	plrum = pull --rebase upstream main
 	pm = push origin master
+	pmm = push origin main
 	r = rebase
 	rmao = remote add origin
 	rmau = remote add upstream
 	rmro = remote remove origin
 	rmru = remote remove upstream
 	ri = rebase -i
+	rir = rebase -i --root
 	rim = rebase -i master
+	rimm = rebase -i main
 	riom = rebase -i origin/master
+	riomm = rebase -i origin/main
 	rium = rebase -i upstream/master
 	riumm = rebase -i upstream/main
 	rm = rebase master
 	rom = rebase origin/master
+	romm = rebase origin/main
 	rum = rebase upstream/master
+	rumm = rebase upstream/main
 	rc = rebase --continue
 	ra = rebase --abort
 	rs = reset
 	st = status
 	s = stash
 	sp = stash pop
-	unstage = reset HEAD --
+	u = reset HEAD --
 [difftool]
 	prompt = false
 [mergetool]
@@ -62,4 +69,7 @@
 	required = true
 [user]
 	name = Niels Gerritsen
-	email = n.gerritsen@protonmail.com
+[includeIf "gitdir:dev/spotify/"]
+  path = ~/dev/spotify/.gitconfig
+[includeIf "gitdir:dev/ngerritsen/"]
+  path = ~/dev/ngerritsen/.gitconfig
