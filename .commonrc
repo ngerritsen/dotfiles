@@ -38,6 +38,7 @@ fi
 
 # Plain aliases
 alias cl="clear"
+alias z="zoxide"
 alias g="git"
 alias nf="neofetch"
 alias pf="pfetch"
@@ -120,10 +121,7 @@ then
   eval "$(zoxide init zsh)"
 fi
 
-if exists neofetch
-then
-  neofetch
-elif exists pfetch
+if exists pfetch
 then
   pfetch
 fi
