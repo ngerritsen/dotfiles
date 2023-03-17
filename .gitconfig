@@ -69,7 +69,7 @@
 	required = true
 [user]
 	name = Niels Gerritsen
-[includeIf "gitdir:dev/spotify/"]
-  path = ~/dev/spotify/.gitconfig
+[includeIf "gitdir:dev/booking/"]
+  path = ~/dev/booking/.gitconfig
 [includeIf "gitdir:dev/ngerritsen/"]
   path = ~/dev/ngerritsen/.gitconfig
