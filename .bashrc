@@ -16,9 +16,9 @@ alias src="source $HOME/.bashrc"
 bind "set completion-ignore-case on"
 
 # Common
-source $HOME/.common.sh
+source $HOME/.commonrc
 
 # Work
-if [ -f $HOME/.work.sh ]; then
-  source $HOME/.work.sh
+if [ -f $HOME/.workrc ]; then
+  source $HOME/.workrc
 fi

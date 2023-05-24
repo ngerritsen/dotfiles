@@ -18,6 +18,7 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/exa"
 
 # Load and initialise completion system
 autoload -Uz compinit
@@ -27,11 +28,11 @@ compinit
 alias src="source $HOME/.zshrc"
 
 # Common
-source $HOME/.common.sh
+source $HOME/.commonrc
 
 # Work
-if [ -f $HOME/.work.sh ]; then
-  source $HOME/.work.sh
+if [ -f $HOME/.workrc ]; then
+  source $HOME/.workrc
 fi
 
 # Vim mode

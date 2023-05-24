@@ -62,18 +62,6 @@ exists ()
   command -v "$1" >/dev/null 2>&1
 }
 
-# Better file listing
-if exists exa
-then
-  alias ls='exa -lh --git --group-directories-first'
-  alias la='exa -a --group-directories-first'
-  alias ll='exa -lha --git --group-directories-first'
-  alias lt='exa -aT --group-directories-first'
-  alias tree="exa --tree --group-directories-first"
-else
-  alias ll='ls -la'
-fi
-
 # Better file viewer
 if exists bat
 then
