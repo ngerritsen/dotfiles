@@ -16,10 +16,9 @@ alias src="source $HOME/.bashrc"
 bind "set completion-ignore-case on"
 
 # Common
-source $HOME/.commonrc
+source $HOME/.common.sh
 
-# Prompt
-if exists starship
-then
-  eval "$(starship init bash)"
+# Work
+if [ -f $HOME/.work.sh ]; then
+  source $HOME/.work.sh
 fi

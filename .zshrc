@@ -6,32 +6,33 @@
 #              /\____/ /\______\
 #              \_/__/  \/______/
 
+
+# Zap
+if ! [ -f $HOME/.local/share/zap/zap.zsh ]; then
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
+fi
+
+source $HOME/.local/share/zap/zap.zsh
+
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
+
 # Source config
 alias src="source $HOME/.zshrc"
 
 # Common
-source $HOME/.commonrc
+source $HOME/.common.sh
+
+# Work
+if [ -f $HOME/.work.sh ]; then
+  source $HOME/.work.sh
+fi
 
 # Vim mode
 bindkey -v
-
-# Plugins
-if [ ! -f "$HOME/.antigen.zsh" ]; then
-  curl -L git.io/antigen > "$HOME/.antigen.zsh"
-fi
-
-source "$HOME/.antigen.zsh"
-
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen apply
-
-# Prompt
-if exists starship
-then
-  eval "$(starship init zsh)"
-else
-  PROMPT='%F{cyan}%1~%f %F{magenta}>%f '
-fi
-

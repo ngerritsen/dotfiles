@@ -1,15 +1,12 @@
 window:
+  decorations: buttonless
   padding:
-    x: 12
-    y: 14
-  decorations: none
-  startup_mode: Maximized
+    x: 10
+    y: 10
 
 font:
   normal:
     family: "FiraCode Nerd Font"
-  offset:
-    y: 2
   size: 13
 
 import:

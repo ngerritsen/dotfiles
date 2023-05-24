@@ -40,12 +40,12 @@ map("n", "<Leader>tg", "<cmd>TestVisit<CR>", opts)
 map("n", "<Leader>ta", "<cmd>TestSuite<CR>", opts)
 
 -- Move lines
-map("v", "<C-j>", "<cmd>m '>+1<CR>gv=gv", opts)
-map("v", "<C-k>", "<cmd>m '>-2<CR>gv=gv", opts)
-map("n", "<C-j>", "<cmd>m .+1<CR>==", opts)
-map("n", "<C-k>", "<cmd>m .-2<CR>==", opts)
-map("i", "<C-j>", "<esc><cmd>m .+1<CR>==", opts)
-map("i", "<C-k>", "<esc><cmd>m .-2<CR>==", opts)
+map("v", "<M-j>", "<cmd>m '>+1<CR>gv=gv", opts)
+map("v", "<M-k>", "<cmd>m '>-2<CR>gv=gv", opts)
+map("n", "<M-j>", "<cmd>m .+1<CR>==", opts)
+map("n", "<M-k>", "<cmd>m .-2<CR>==", opts)
+map("i", "<M-j>", "<esc><cmd>m .+1<CR>==", opts)
+map("i", "<M-k>", "<esc><cmd>m .-2<CR>==", opts)
 
 -- Resize Splits
 map("n", "<C-w>-", "<cmd>resize -8<CR>", opts)

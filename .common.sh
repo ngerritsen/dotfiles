@@ -40,8 +40,10 @@ fi
 alias cl="clear"
 alias z="zoxide"
 alias g="git"
+alias y="yarn"
 alias nf="neofetch"
 alias pf="pfetch"
+alias pn="pnpm"
 
 # Utilities
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
@@ -50,9 +52,9 @@ alias dsa='docker stop $(docker ps -q)'
 alias fs='fortune | cowsay | lolcat'
 alias nnn='nnn -dH'
 
-function gh()
+function gremote()
 {
-  open "$(git remote get-url upstream)"
+  open "$(git remote get-url origin)"
 }
 
 exists ()

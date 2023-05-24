@@ -55,6 +55,7 @@ return packer.startup(function(use)
 	-- General
 	use("numToStr/Comment.nvim") -- Easy comments
 	use("sheerun/vim-polyglot") -- Basic syntax highlighting for popular file types
+	use("christoomey/vim-tmux-navigator") -- Tmux window switching integration
 
 	-- Utility
 	use("kburdett/vim-nuuid") -- Generate UUID's
@@ -92,6 +93,16 @@ return packer.startup(function(use)
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- Luasnip snippets plugin
 	use("rafamadriz/friendly-snippets") -- Snippet library
+
+	-- Neotest
+	use {
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim"
+		}
+	}
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- Enables LSP
