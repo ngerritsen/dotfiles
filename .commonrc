@@ -19,11 +19,6 @@ then
   PATH="$HOME/Applications:$PATH"
 fi
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 # Pypy
 PATH=$PATH:/opt/pypy3.9-v7.3.10-macos_arm64/bin
 
@@ -41,8 +36,6 @@ alias cl="clear"
 alias z="zoxide"
 alias g="git"
 alias y="yarn"
-alias nf="neofetch"
-alias pf="pfetch"
 alias pn="pnpm"
 
 # Utilities
@@ -51,6 +44,7 @@ alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
 alias fs='fortune | cowsay | lolcat'
 alias nnn='nnn -dH'
+alias nn='n $(cat .nvmrc)'
 
 function gremote()
 {

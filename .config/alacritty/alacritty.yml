@@ -10,4 +10,4 @@ font:
   size: 13
 
 import:
-  - ~/.config/alacritty/themes/gruvbox.yml
+  - ~/.config/alacritty/themes/catppuccin-macchiato.yml
