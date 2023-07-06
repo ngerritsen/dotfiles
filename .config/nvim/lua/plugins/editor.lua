@@ -43,6 +43,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
@@ -55,6 +56,7 @@ return {
 			{ "<leader>fq", "<cmd>Telescope quickfix<cr>", desc = "Show quickfix" },
 			{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Find colorscheme" },
 		},
+		config = true,
 	},
 	{
 		"nvim-lualine/lualine.nvim",

@@ -26,8 +26,21 @@ return {
 			mason_lspconfig.setup({
 				ensure_installed = {
 					"tsserver",
+					"eslint",
 					"lua_ls",
+					"gopls",
 					"rust_analyzer",
+					"intelephense",
+					"pyright",
+					"html",
+					"marksman",
+					"jsonls",
+					"jdtls",
+					"clangd",
+					"csharp_ls",
+					"tailwindcss",
+					"taplo",
+					"yamlls",
 				},
 			})
 

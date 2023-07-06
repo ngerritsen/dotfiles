@@ -4,6 +4,8 @@ return {
 	{ "norcalli/nvim-colorizer.lua", config = true },
 	{
 		"folke/todo-comments.nvim",
+		event = "VeryLazy",
+		config = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
