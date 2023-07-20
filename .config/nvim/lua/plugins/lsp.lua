@@ -4,6 +4,7 @@ return {
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
+			{ "folke/neodev.nvim", config = true },
 		},
 		keys = {
 			{ "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>" },
@@ -11,6 +12,7 @@ return {
 			{ "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>" },
 			{ "gr", "<cmd>lua vim.lsp.buf.references()<CR>" },
 			{ "gl", "<cmd>lua vim.diagnostic.open_float()<CR>" },
+			{ "K", vim.lsp.buf.hover },
 			{ "<leader>rs", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
 			{ "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>" },
 			{ "<leader>rf", "<cmd>lua vim.lsp.buf.code_action()<CR>" },
@@ -37,7 +39,6 @@ return {
 					"jsonls",
 					"jdtls",
 					"clangd",
-					"csharp_ls",
 					"tailwindcss",
 					"taplo",
 					"yamlls",

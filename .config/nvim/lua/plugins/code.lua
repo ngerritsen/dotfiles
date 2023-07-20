@@ -1,7 +1,12 @@
 return {
 	{ "editorconfig/editorconfig-vim" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = true },
-	{ "norcalli/nvim-colorizer.lua", config = true },
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
 	{
 		"folke/todo-comments.nvim",
 		event = "VeryLazy",
@@ -10,14 +15,23 @@ return {
 	},
 	{
 		"vim-test/vim-test",
-		event = "VeryLazy",
-		keys = {
-			{ "<leader>tf", "<cmd>TestFile<cr>", desc = "Run tests (current file)" },
-			{ "<leader>tn", "<cmd>TestNearest<cr>", desc = "Run tests (nearest)" },
-			{ "<leader>tl", "<cmd>TestLast<cr>", desc = "Run tests (last)" },
-			{ "<leader>tg", "<cmd>TestVisit<cr>", desc = "Open test file" },
-			{ "<leader>ta", "<cmd>TestSuite<cr>", desc = "Run tests (suite)" },
+		dependencies = {
+			"folke/which-key.nvim",
 		},
+		event = "VeryLazy",
+		config = function()
+			vim.cmd([[let test#strategy = "neovim"]])
+			require("which-key").register({
+				t = {
+					name = "test",
+					f = { "<cmd>TestFile<cr>", "Run tests (current file)" },
+					n = { "<cmd>TestNearest<cr>", "Run tests (nearest)" },
+					l = { "<cmd>TestLast<cr>", "Run tests (last)" },
+					g = { "<cmd>TestVisit<cr>", "Open test file" },
+					a = { "<cmd>TestSuite<cr>", "Run tests (suite)" },
+				},
+			}, { prefix = "<leader>" })
+		end,
 	},
 	{
 		"echasnovski/mini.nvim",
@@ -26,7 +40,7 @@ return {
 			require("mini.comment").setup({
 				options = {
 					custom_commentstring = function()
-						return require("ts_context_commentstring.internal").calculate_commentstring()
+						return require("ts_context_commentstring.internal").calculate_commentstring({})
 							or vim.bo.commentstring
 					end,
 				},
@@ -36,14 +50,21 @@ return {
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	{
 		"folke/trouble.nvim",
-		keys = {
-			{ "<leader>xx", "<cmd>TroubleToggle<cr>" },
-			{ "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>" },
-			{ "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>" },
-			{ "<leader>xq", "<cmd>TroubleToggle quickfix<cr>" },
-			{ "<leader>xx", "<cmd>TroubleToggle loclist<cr>" },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			"folke/which-key.nvim",
 		},
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("which-key").register({
+				x = {
+					name = "diagnostics",
+					x = { "<cmd>TroubleToggle document_diagnostics<cr>", "Show document diagnostics" },
+					w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Show workspace diagnostics" },
+					q = { "<cmd>TroubleToggle quickfix<cr>", "Show diagnostics in quickfix list" },
+					l = { "<cmd>TroubleToggle loclist<cr>", "Show diagnostics in loclist" },
+				},
+			}, { prefix = "<leader>" })
+		end,
 	},
 	{
 		"L3MON4D3/LuaSnip",
