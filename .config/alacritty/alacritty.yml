@@ -7,7 +7,7 @@ window:
 font:
   normal:
     family: "FiraCode Nerd Font"
-  size: 13
+  size: 14
 
 import:
   - ~/.config/alacritty/themes/catppuccin-macchiato.yml

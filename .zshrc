@@ -37,3 +37,6 @@ fi
 
 # Vim mode
 bindkey -v
+
+# bun completions
+[ -s "/Users/ngerritsen/.bun/_bun" ] && source "/Users/ngerritsen/.bun/_bun"
