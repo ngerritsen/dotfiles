@@ -73,3 +73,5 @@
   path = ~/dev/booking/.gitconfig
 [includeIf "gitdir:dev/ngerritsen/"]
   path = ~/dev/ngerritsen/.gitconfig
+[init]
+	templatedir = /Users/ngerritsen/.git-templates

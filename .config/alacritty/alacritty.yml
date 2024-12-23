@@ -6,8 +6,8 @@ window:
 
 font:
   normal:
-    family: "FiraCode Nerd Font"
+    family: "FiraMono Nerd Font Propo"
   size: 14
 
 import:
-  - ~/.config/alacritty/themes/catppuccin-macchiato.yml
+  - ~/.config/alacritty/themes/tokyonight-moon.yml

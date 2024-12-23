@@ -38,17 +38,13 @@ alias g="git"
 alias y="yarn"
 alias pn="pnpm"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # Nvm bash completion
-alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@" # Lazy load nvm
-
 # Utilities
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
 alias fs='fortune | cowsay | lolcat'
 alias nnn='nnn -dH'
+alias ll='ls -la'
 
 function gremote()
 {
@@ -71,7 +67,7 @@ fi
 # Better file viewer
 if exists bat
 then
-  export BAT_THEME="ansi-dark"
+  export BAT_THEME="ansi"
   alias cat='bat'
 fi
 
@@ -115,9 +111,4 @@ alias df='df -h'
 if exists zoxide
 then
   eval "$(zoxide init zsh)"
-fi
-
-if exists pfetch
-then
-  pfetch
 fi

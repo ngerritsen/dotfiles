@@ -28,3 +28,4 @@ The git config doesn't come with a user out of the box to avoid users getting mi
 git config --global user.name "Your Name"
 git config --global user.email "youremail@yourdomain.com"
 ```
+

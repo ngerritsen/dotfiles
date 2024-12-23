@@ -25,6 +25,7 @@ compinit
 
 # Source config
 alias src="source $HOME/.zshrc"
+alias dev="pnpm install; nx auth; nx auth:prod; nx start frontend"
 
 # Common
 source $HOME/.commonrc
