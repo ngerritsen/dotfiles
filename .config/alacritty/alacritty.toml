@@ -1,0 +1,15 @@
+[window]
+decorations = "buttonless"
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 14
+
+[font.normal]
+family = "FiraMono Nerd Font Propo"
+
+[general]
+import = ["themes/tokyonight-moon.toml"]
