@@ -1,0 +1,6 @@
+font-size = 14
+font-thicken = true
+font-family = "HackNerdFont"
+theme = TokyoNight Moon
+background-opacity = 0.9
+background-blur-radius = 30

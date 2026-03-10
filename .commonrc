@@ -19,6 +19,12 @@ then
   PATH="$HOME/Applications:$PATH"
 fi
 
+# Add Docker Desktop for Mac (docker)
+if [ -d "/Applications/Docker.app/Contents/Resources/bin/" ]
+then
+  PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+fi
+
 # Pypy
 PATH=$PATH:/opt/pypy3.9-v7.3.10-macos_arm64/bin
 
@@ -92,10 +98,6 @@ then
 else
   alias v="vim"
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # bun completions
 [ -s "/Users/nielsg/.bun/_bun" ] && source "/Users/nielsg/.bun/_bun"

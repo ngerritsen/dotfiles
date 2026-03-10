@@ -25,7 +25,6 @@ compinit
 
 # Source config
 alias src="source $HOME/.zshrc"
-alias dev="pnpm install; nx auth; nx auth:prod; nx start frontend"
 
 # Common
 source $HOME/.commonrc
@@ -37,6 +36,3 @@ fi
 
 # Vim mode
 bindkey -v
-
-# bun completions
-[ -s "/Users/ngerritsen/.bun/_bun" ] && source "/Users/ngerritsen/.bun/_bun"

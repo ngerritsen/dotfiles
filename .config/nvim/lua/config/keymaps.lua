@@ -2,5 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("i", "jj", "<esc>")
-vim.keymap.set("n", "<leader><leader>", "<C-^>")
+local map = LazyVim.safe_keymap_set
+
+map("i", "jj", "<esc>");
+map("n", "<leader><leader>", "<C-^>")
