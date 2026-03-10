@@ -114,3 +114,9 @@ if exists zoxide
 then
   eval "$(zoxide init zsh)"
 fi
+
+# Fastfetch
+if exists fastfetch
+then
+  fastfetch
+fi
