@@ -1,35 +1,22 @@
+# Utilities
+exists ()
+{
+  command -v "$1" >/dev/null 2>&1
+}
+
 # Exports
-export TERM="xterm-256color"
-export EDITOR=vim
-export VISUAL=vim
+if exists nvim; then
+  export EDITOR=nvim
+  export VISUAL=nvim
+else
+  export EDITOR=vim
+  export VISUAL=vim
+fi
 
 # Path
-if [ -d "$HOME/.bin" ]
-then
-  PATH="$HOME/.bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ]
-then
-  PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/Applications" ]
-then
-  PATH="$HOME/Applications:$PATH"
-fi
-
-# Add Docker Desktop for Mac (docker)
-if [ -d "/Applications/Docker.app/Contents/Resources/bin/" ]
-then
-  PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-fi
-
-# Pypy
-PATH=$PATH:/opt/pypy3.9-v7.3.10-macos_arm64/bin
-
-# Gcloud
-PATH=$PATH:/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
+for dir in "$HOME/.bin" "$HOME/.local/bin" "$HOME/Applications"; do
+  [ -d "$dir" ] && PATH="$dir:$PATH"
+done
 
 # Rust
 if [ -f "$HOME/.cargo/env" ]
@@ -44,24 +31,23 @@ alias g="git"
 alias y="yarn"
 alias pn="pnpm"
 
-# Utilities
+# Aliases
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 alias tmx='tmux attach || tmux new -s main'
 alias dsa='docker stop $(docker ps -q)'
-alias fs='fortune | cowsay | lolcat'
 alias nnn='nnn -dH'
-alias ll='ls -la'
 
 function gremote()
 {
-  open "$(git remote get-url origin)"
+  local url="$(git remote get-url origin)"
+  if exists open; then
+    open "$url"
+  elif exists xdg-open; then
+    xdg-open "$url"
+  else
+    echo "$url"
+  fi
 }
-
-exists ()
-{
-  command -v "$1" >/dev/null 2>&1
-}
-
 
 # Better ls
 if exists eza
@@ -84,7 +70,7 @@ then
 fi
 
 # Better ping
-if exists prettytyping
+if exists prettyping
 then
   alias ping='prettyping --nolegend'
 fi
@@ -93,26 +79,8 @@ fi
 if exists nvim
 then
   alias v="nvim"
-  export EDITOR=nvim
-  export VISUAL=nvim
 else
   alias v="vim"
-fi
-
-# bun completions
-[ -s "/Users/nielsg/.bun/_bun" ] && source "/Users/nielsg/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Add default flags
-alias df='df -h'
-
-# Zoxide
-if exists zoxide
-then
-  eval "$(zoxide init zsh)"
 fi
 
 # Fastfetch

@@ -9,7 +9,7 @@ y = 10
 size = 14
 
 [font.normal]
-family = "FiraMono Nerd Font Propo"
+family = "FiraCode Nerd Font"
 
 [general]
 import = ["themes/tokyonight-moon.toml"]

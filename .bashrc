@@ -13,10 +13,15 @@ export PS1='\[\e[36m\]\w \[\e[35m\]> \[\e[0m\]'
 alias src="source $HOME/.bashrc"
 
 # Case insensitive autocompletion
-bind "set completion-ignore-case on"
+bind 'set completion-ignore-case on'
 
 # Common
 source $HOME/.commonrc
+
+# Zoxide
+if exists zoxide; then
+  eval "$(zoxide init bash)"
+fi
 
 # Work
 if [ -f $HOME/.workrc ]; then

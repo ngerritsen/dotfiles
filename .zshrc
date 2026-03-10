@@ -14,14 +14,13 @@ fi
 
 source $HOME/.local/share/zap/zap.zsh
 
+# Plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
+plug "zap-zsh/nvm"
 plug "zsh-users/zsh-syntax-highlighting"
-
-# Load and initialise completion system
-autoload -Uz compinit
-compinit
+plug "mahcodes/distro-prompt"
+export VI_MODE_ESC_INSERT="jj" && plug "zap-zsh/vim"
 
 # Source config
 alias src="source $HOME/.zshrc"
@@ -29,10 +28,13 @@ alias src="source $HOME/.zshrc"
 # Common
 source $HOME/.commonrc
 
+# Zoxide
+if exists zoxide
+then
+  eval "$(zoxide init zsh)"
+fi
+
 # Work
 if [ -f $HOME/.workrc ]; then
   source $HOME/.workrc
 fi
-
-# Vim mode
-bindkey -v

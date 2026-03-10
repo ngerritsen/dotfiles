@@ -18,7 +18,29 @@ These dotfiles support bash, but most of the shell enhancements use [Zsh](https:
 
 ### Fonts
 
-To get the best experience, install and use a [Nerd Font](https://www.nerdfonts.com/) ([Installation instructions](https://github.com/ryanoasis/nerd-fonts#font-installation))
+To get the best experience, install and use a [Nerd Font](https://www.nerdfonts.com/), this repo uses FiraCode ([Installation instructions](https://github.com/ryanoasis/nerd-fonts#font-installation)).
+
+### Tools
+
+The shell has aliases for some tools, these are not automatically installed, since you might not need them on a lightweight system.
+
+#### MacOS
+
+```
+brew update; brew install nvim git fzf zoxide eza nvm bat ncdu prettyping
+```
+
+#### Fedora
+
+```
+sudo dnf update; sudo dnf install nvim git fzf zoxide eza nvm bat ncdu prettyping
+```
+
+#### Ubuntu/Debian
+
+```
+sudo apt update; sudo apt install nvim git fzf zoxide eza nvm bat ncdu prettyping
+```
 
 ### Git user
 
@@ -26,6 +48,9 @@ The git config doesn't come with a user out of the box to avoid users getting mi
 
 ```
 git config --global user.name "Your Name"
-git config --global user.email "youremail@yourdomain.com"
+git config --global user.email "<youremail@yourdomain.com>"
 ```
 
+```
+
+```
