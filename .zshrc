@@ -17,7 +17,6 @@ source $HOME/.local/share/zap/zap.zsh
 # Plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-plug "zap-zsh/nvm"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "mahcodes/distro-prompt"
 export VI_MODE_ESC_INSERT="jj" && plug "zap-zsh/vim"
