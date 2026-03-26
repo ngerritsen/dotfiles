@@ -26,7 +26,6 @@ fi
 
 # Plain aliases
 alias cl="clear"
-alias z="zoxide"
 alias g="git"
 alias y="yarn"
 alias pn="pnpm"
@@ -88,3 +87,8 @@ if exists fastfetch
 then
   fastfetch
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
