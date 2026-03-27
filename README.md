@@ -33,19 +33,19 @@ brew update; brew install fzf zoxide eza bat ncdu prettyping -y
 #### Fedora
 
 ```
-sudo dnf update; sudo dnf install zsh vim git fzf zoxide eza bat ncdu prettyping -y
+sudo dnf update; sudo dnf install zsh vim git fzf zoxide eza bat ncdu prettyping htop -y
 ```
 
 #### Ubuntu/Debian
 
 ```
-sudo apt update; sudo apt install zsh vim git fzf zoxide eza bat ncdu prettyping -y
+sudo apt update; sudo apt install zsh vim git fzf zoxide eza bat ncdu prettyping htop -y
 ```
 
 #### Arch
 
 ```
-sudo pacman -S zsh vim git fzf zoxide eza bat ncdu prettyping
+sudo pacman -S zsh vim git fzf zoxide eza bat ncdu prettyping htop
 ```
 
 #### NVM
