@@ -27,20 +27,36 @@ The shell has aliases for some tools, these are not automatically installed, sin
 #### MacOS
 
 ```
-brew update; brew install nvim git fzf zoxide eza nvm bat ncdu prettyping
+brew update; brew install fzf zoxide eza bat ncdu prettyping -y
 ```
 
 #### Fedora
 
 ```
-sudo dnf update; sudo dnf install nvim git fzf zoxide eza nvm bat ncdu prettyping
+sudo dnf update; sudo dnf install zsh vim git fzf zoxide eza bat ncdu prettyping -y
 ```
 
 #### Ubuntu/Debian
 
 ```
-sudo apt update; sudo apt install nvim git fzf zoxide eza nvm bat ncdu prettyping
+sudo apt update; sudo apt install zsh vim git fzf zoxide eza bat ncdu prettyping -y
 ```
+
+#### Arch
+
+```
+sudo pacman -S zsh vim git fzf zoxide eza bat ncdu prettyping
+```
+
+#### NVM
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+```
+
+#### Neovim
+
+You'll need the nightly build. Follow the instructions [here](https://github.com/neovim/neovim/releases/tag/nightly).
 
 ### Git user
 
@@ -49,8 +65,4 @@ The git config doesn't come with a user out of the box to avoid users getting mi
 ```
 git config --global user.name "Your Name"
 git config --global user.email "<youremail@yourdomain.com>"
-```
-
-```
-
 ```
