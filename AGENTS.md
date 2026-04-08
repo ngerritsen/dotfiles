@@ -1,0 +1,1 @@
+/Users/ngerritsen/.agents/AGENTS.md
