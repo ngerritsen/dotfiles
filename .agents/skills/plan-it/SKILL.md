@@ -1,9 +1,9 @@
 ---
-name: plan-feature
-description: Thoroughly plan and build a new feature
+name: plan-it
+description: Thoroughly plan and develop a feature or execute a task.
 ---
 
-This skill will be invoked when the user wants to develop a new feature. You may skip steps if you don't consider them necessary.
+This skill will be invoked when the user wants to develop a new feature or perform another more complex task. You may skip steps if you don't consider them necessary.
 
 1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.
 
@@ -20,7 +20,6 @@ Check with the user that these modules match their expectations. Check with the 
 5. Once you have a complete understanding of the problem and solution, use the template below to write the Plan:
 
 <plan-template>
-
 ## Problem Statement
 
 The problem that the user is facing, from the user's perspective.
@@ -58,5 +57,6 @@ A description of the things that are out of scope for this PRD.
 ## Further Notes
 
 Any further notes about the feature.
-
 </plan-template>
+
+6. Ask the user whether they want to save the plan or just execute the plan immediately. The options for saving it could be a markdown in a ./plans folder, or saving it in a GitHub issue if it's a GitHub repo.
