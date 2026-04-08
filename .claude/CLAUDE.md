@@ -1,1 +1,1 @@
-/Users/ngerritsen/.agents/AGENTS.md
+../.agents/AGENTS.md
